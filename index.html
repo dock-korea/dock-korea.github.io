@@ -376,7 +376,7 @@ footer b{color:#fff;font-size:16px}
         <h3>두꺼운 강철 뼈대</h3>
         <p>160×80mm 각관 다섯 줄이 길이 방향으로 지나가고, 100×50mm 각관이 가로로 받칩니다.</p>
         <ul>
-          <li>주 뼈대 160×80mm 각관 5줄</li>
+          <li>주 뼈대 160×80mm 각관 5줄 (10톤 기준)</li>
           <li>가로대 100×50mm 각관</li>
           <li>바닥 4mm 철판 + 미끄럼 방지 망</li>
         </ul>
@@ -555,11 +555,11 @@ footer b{color:#fff;font-size:16px}
     <h2>규격과 도면</h2>
     <div class="tablebox">
       <table>
-        <thead><tr><th>톤수</th><th>모델</th><th>올릴 수 있는 무게</th><th>유압 높이 조절</th><th>전체 길이</th><th>폭 (바깥 / 바닥)</th><th>올리는 방식</th></tr></thead>
+        <thead><tr><th>톤수</th><th>모델</th><th>주 뼈대</th><th>유압 높이 조절</th><th>전체 길이</th><th>폭 (바깥 / 바닥)</th><th>올리는 방식</th></tr></thead>
         <tbody id="tb"></tbody>
       </table>
     </div>
-    <p class="note">10톤은 확정 사양입니다. 다른 톤수는 주문할 때 사양을 확인해 드립니다. 길이와 폭은 주문할 때 바꿀 수 있습니다.</p>
+    <p class="note">톤수가 올라가면 주 뼈대가 굵어집니다. 10톤은 확정 사양이고, 다른 톤수는 주문할 때 사양을 확인해 드립니다. 길이와 폭은 주문할 때 바꿀 수 있습니다.</p>
 
     <h3 class="sub">10톤(DCQY-10T) 상세 사양</h3>
     <dl class="specs">
@@ -646,11 +646,12 @@ footer b{color:#fff;font-size:16px}
     15: {w:"3,200kg", fit:"4.5~5톤 지게차 작업에 맞습니다",    why:"예: 지게차 7톤 + 짐 5톤 = 12톤. 중량물 현장용입니다."}
   };
   var order = [6,8,10,12,15];
+  var FRAME = {6:"160×80 각관 4줄", 8:"160×80 각관 4줄 + 120×60 각관 1줄", 10:"160×80 각관 5줄", 12:"200×100 각관 4줄 + 160×80 각관 1줄", 15:"200×100 각관 5줄"};
   var $ = function(id){ return document.getElementById(id); };
 
   // 규격표
   $("tb").innerHTML = order.map(function(t){
-    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>'+t+',000kg</td><td>1.1 ~ 1.7m</td><td>11.15m</td><td>2.2m / 2.1m</td><td>수동 유압 펌프</td></tr>';
+    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>'+FRAME[t]+'</td><td>1.1 ~ 1.7m</td><td>11.15m</td><td>2.2m / 2.1m</td><td>수동 유압 펌프</td></tr>';
   }).join("");
 
   function pick(t){
