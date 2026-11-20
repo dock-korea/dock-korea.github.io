@@ -303,7 +303,7 @@ footer b{color:#fff;font-size:16px}
           <text x="594" y="190" font-size="15" font-weight="800" fill="#17212c">높이</text>
           <text x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.7m</text>
         </svg>
-        <p class="cap">폭 2.1m. 높이는 손 펌프로 맞춥니다.</p>
+        <p class="cap">폭 2.2m. 높이는 손 펌프로 맞춥니다.</p>
       </div>
       <div class="info">
         <p class="model" id="iModel">DCQY-10T</p>
@@ -313,7 +313,7 @@ footer b{color:#fff;font-size:16px}
         <ul class="spec">
           <li><span>올릴 수 있는 무게</span><b id="iCap">10톤</b></li>
           <li><span>높이 조절</span><b>1.1 ~ 1.7m</b></li>
-          <li><span>크기 (길이×폭×높이)</span><b>11.15 × 2.1 × 1.1m</b></li>
+          <li><span>크기 (길이×폭×높이)</span><b>11.15 × 2.2 × 1.1m</b></li>
           <li><span>본체 무게</span><b id="iW">2,400kg</b></li>
           <li><span>올리는 방식</span><b>수동 유압 펌프 (전기 필요 없음)</b></li>
         </ul>
@@ -381,7 +381,7 @@ footer b{color:#fff;font-size:16px}
         <tbody id="tb"></tbody>
       </table>
     </div>
-    <p class="note">제조사 공개 규격 기준입니다. 길이·폭·난간은 주문할 때 바꿀 수 있고, 2단 분리형은 사양에 따라 치수가 달라질 수 있습니다.</p>
+    <p class="note">폭 2.2m 사양 기준입니다. 본체 무게는 사양에 따라 조금 달라질 수 있고, 길이·난간은 주문할 때 바꿀 수 있습니다.</p>
   </div>
 </section>
 
@@ -442,7 +442,7 @@ footer b{color:#fff;font-size:16px}
 
   // 규격표
   $("tb").innerHTML = order.map(function(t){
-    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>1.1 ~ 1.7m</td><td>11.15 × 2.1 × 1.1m</td><td>'+D[t].w+'</td><td>수동 유압 펌프</td></tr>';
+    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>1.1 ~ 1.7m</td><td>11.15 × 2.2 × 1.1m</td><td>'+D[t].w+'</td><td>수동 유압 펌프</td></tr>';
   }).join("");
 
   function pick(t){
