@@ -159,7 +159,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 .feat figcaption span{font-size:15px;color:#d9e1ea}
 .feat figure{grid-column:span 4;aspect-ratio:4/3}
 .lead-item{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center;margin-top:44px}
-.lead-item.rev{grid-template-columns:5fr 7fr;margin-top:64px}
+.lead-item + .lead-item{margin-top:64px}
+.lead-item.rev{grid-template-columns:5fr 7fr}
+.feat.four figure{grid-column:span 3;aspect-ratio:1/1}
+.feat.four figcaption{padding:48px 16px 16px}
+.feat.four figcaption b{font-size:17px}
+.feat.four figcaption span{font-size:14px}
 .lead-item.rev > :first-child{order:2}
 .lead-item img,.lead-item video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--ink)}
 .lead-item img{aspect-ratio:4/3}
@@ -364,7 +369,7 @@ footer b{color:#fff;font-size:16px}
 
 <section class="sec" id="feature">
   <div class="wrap">
-    <h2>뼈대와 바퀴부터 보세요</h2>
+    <h2>가장 먼저 보셔야 할 세 가지</h2>
     <div class="lead-item">
       <video muted loop playsinline autoplay poster="assets/img/detail-poster.jpg"><source src="assets/video/detail.mp4" type="video/mp4"></video>
       <div>
@@ -378,10 +383,22 @@ footer b{color:#fff;font-size:16px}
       </div>
     </div>
     <div class="lead-item rev">
+      <img src="assets/img/lead-hyd.jpg" alt="손잡이를 저어 유압으로 도크 높이를 올리는 모습" loading="lazy">
+      <div>
+        <h3>전기 없이 유압으로 높이 조절</h3>
+        <p>수동 유압 펌프의 손잡이를 저으면 도크가 올라갑니다. 전기도 배터리도 필요 없어서 야적장 어디서나 씁니다.</p>
+        <ul>
+          <li>수동 유압 펌프로 1.1 ~ 1.7m</li>
+          <li>한 사람이 손으로 올리고 내림</li>
+          <li>컨테이너, 탑차, 화물차 높이에 모두 맞춤</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-item">
       <img src="assets/img/wheel.jpg" alt="유압 실린더 두 개와 이어진 솔리드 타이어 바퀴" loading="lazy">
       <div>
         <h3>유압으로 움직이는 솔리드 타이어 바퀴</h3>
-        <p>수동 유압 펌프를 저으면 유압 실린더 두 개가 바퀴 축을 밀어 도크를 올립니다. 옮길 때도 이 바퀴로 끌어 옮깁니다.</p>
+        <p>유압 실린더 두 개가 바퀴 축을 밀어 도크를 올립니다. 옮길 때도 이 바퀴로 끌어 옮깁니다.</p>
         <ul>
           <li>유압 실린더 지름 80mm × 2개</li>
           <li>펑크가 나지 않는 솔리드 타이어</li>
@@ -389,14 +406,12 @@ footer b{color:#fff;font-size:16px}
         </ul>
       </div>
     </div>
-    <h3 class="sub">그 밖에 따져 볼 여섯 가지</h3>
-    <div class="feat">
+    <h3 class="sub">그 밖에 따져 볼 네 가지</h3>
+    <div class="feat four">
       <figure><img src="assets/img/tail.jpg" alt="틈이 없는 일체형 꼬리판" loading="lazy"><figcaption><b>틈 없는 일체형 꼬리판</b><span>지게차 바퀴가 틈새에 빠지지 않게 한 장으로 만들었습니다.</span></figcaption></figure>
       <figure><img src="assets/img/part-grid.jpg" alt="미끄럼 방지 망을 덧댄 바닥" loading="lazy"><figcaption><b>미끄럽지 않은 바닥</b><span>4mm 철판 위에 다이아몬드 무늬 미끄럼 방지 망.</span></figcaption></figure>
-      <figure><img src="assets/img/use4.jpg" alt="탑차에 연결한 이동식 도크" loading="lazy"><figcaption><b>전기 없이 유압으로 높이 조절</b><span>수동 유압 펌프로 1.1~1.7m. 탑차·컨테이너 모두.</span></figcaption></figure>
       <figure><img src="assets/img/part-leg.jpg" alt="손으로 돌려 맞추는 받침 다리" loading="lazy"><figcaption><b>손으로 돌리는 받침 다리</b><span>기계식 받침 다리 한 벌. 높이를 맞춘 뒤 세워 둡니다.</span></figcaption></figure>
-      <figure><img src="assets/img/part-lip.jpg" alt="차 바닥에 걸친 걸침판" loading="lazy"><figcaption><b>걸침판과 안전 체인</b><span>16mm 철판 걸침판을 차 바닥에 걸치고, 체인으로 차와 묶습니다.</span></figcaption></figure>
-      <figure><img src="assets/img/use1.jpg" alt="지게차가 이동식 도크로 컨테이너에 짐을 싣는 모습" loading="lazy"><figcaption><b>컨테이너 안까지 지게차로</b><span>사람이 나르던 일을 지게차 한 대가 합니다.</span></figcaption></figure>
+      <figure><img src="assets/img/part-lip.jpg" alt="차 바닥에 걸친 걸침판" loading="lazy"><figcaption><b>걸침판과 안전 체인</b><span>16mm 철판 걸침판을 걸치고, 체인으로 차와 묶습니다.</span></figcaption></figure>
     </div>
   </div>
 </section>
