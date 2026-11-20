@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이동식 도크 6톤~15톤 | 2단 분리형 컨테이너 상하차 경사로</title>
+<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 6·8·10·12·15톤, 높이 1.1~1.7m 조절, 2단 분리형.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap">
+<script>
+/* ───────── 여기만 고치면 됩니다 ───────── */
+var SITE = {
+  name: "이동식 도크",          // 상호
+  tel: "",                      // 대표 전화 (예: "031-000-0000")
+  kakao: "",                    // 카카오톡 채널 주소
+  // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
+  endpoint: "https://docs.google.com/forms/d/e/1FAIpQLSemXc8IkjYKYkBPOfzdNQn_7CLXf5B5F1qgM8W7IElYtC2u9A/formResponse",
+  fields: { name: "entry.2145933058", tel: "entry.1032847968", ton: "entry.1619154672", area: "entry.1851190465", msg: "entry.1150018617" }
+};
+</script>
+<style id="main">
+:root{
+  --blue:#1560c4; --blue-deep:#0c3f8a; --yellow:#f6b900; --ink:#17212c;
+  --steel:#5b6b7b; --concrete:#eef0f2; --line:#d5dae0; --white:#fff;
+  --num:"Barlow Condensed","Pretendard Variable",sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Pretendard Variable",Pretendard,"Malgun Gothic",sans-serif;color:var(--ink);background:var(--white);line-height:1.65;word-break:keep-all}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 40px);margin-inline:auto}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 18px,var(--ink) 18px 36px)}
+
+/* 머리말 */
+.top{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.01em}
+.brand i{width:30px;height:20px;background:var(--blue);clip-path:polygon(0 100%,62% 0,100% 0,100% 100%)}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:15px;font-weight:600}
+.nav a{text-decoration:none;padding:6px 0}
+.nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;border:2px solid transparent;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
+.btn-y{background:var(--yellow);color:var(--ink)}
+.btn-y:hover{background:#ffc91f}
+.btn-b{background:var(--blue);color:#fff}
+.btn-b:hover{background:var(--blue-deep)}
+.btn-line{border-color:#fff;color:#fff}
+.top .btn{min-height:40px;padding:0 16px;font-size:15px}
+
+/* 첫 화면 */
+.hero{position:relative;height:clamp(560px,92vh,820px);color:#fff;background:var(--ink);overflow:hidden}
+.hero video,.hero .hero-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,24,38,.88) 0%,rgba(13,24,38,.62) 46%,rgba(13,24,38,.12) 100%)}
+.hero > .wrap{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding-bottom:56px}
+.hero h1{font-size:clamp(34px,5.4vw,68px);line-height:1.14;font-weight:800;letter-spacing:-.025em;max-width:13em}
+.hero p{margin-top:22px;font-size:clamp(17px,1.6vw,21px);max-width:31em;color:#e3e9f0}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.pick{position:absolute;z-index:1;left:0;right:0;bottom:0;background:rgba(13,24,38,.82);border-top:1px solid rgba(255,255,255,.18)}
+.pick .wrap{display:flex;align-items:center;gap:18px;height:72px;overflow-x:auto}
+.pick span{font-weight:600;white-space:nowrap;color:#cfd8e2}
+.pick a{font-family:var(--num);font-size:30px;font-weight:700;text-decoration:none;white-space:nowrap;padding:4px 14px;border-radius:4px;line-height:1.2}
+.pick a small{font-family:"Pretendard Variable",sans-serif;font-size:15px;font-weight:600;margin-left:1px}
+.pick a:hover{background:var(--yellow);color:var(--ink)}
+
+/* 구역 공통 */
+.sec{padding:96px 0}
+.sec h2{font-size:clamp(28px,3.4vw,42px);line-height:1.2;font-weight:800;letter-spacing:-.02em}
+.sec .lead{margin-top:14px;font-size:18px;color:var(--steel);max-width:34em}
+.gray{background:var(--concrete)}
+
+/* 톤수 고르기 */
+.tons{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:40px}
+.tons button{height:112px;border:2px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-family:var(--num);font-size:54px;font-weight:700;line-height:1;color:var(--steel);transition:background .15s,color .15s,border-color .15s}
+.tons button small{font-family:"Pretendard Variable",sans-serif;font-size:18px;font-weight:700;margin-left:2px}
+.tons button:hover{border-color:var(--blue);color:var(--blue)}
+.tons button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{display:grid;grid-template-columns:1.25fr 1fr;gap:0;margin-top:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.draw{padding:28px 28px 18px;border-right:2px solid var(--ink);background:
+  linear-gradient(#e8eef6 1px,transparent 1px) 0 0/100% 28px,
+  linear-gradient(90deg,#e8eef6 1px,transparent 1px) 0 0/28px 100%,#f8fafc}
+.draw svg{width:100%;height:auto;display:block}
+.draw .cap{margin-top:8px;font-size:14px;color:var(--steel)}
+.info{padding:30px 32px 32px;display:flex;flex-direction:column}
+.info .model{font-weight:700;color:var(--blue)}
+.info .big{font-family:var(--num);font-size:108px;font-weight:700;line-height:.95;letter-spacing:-.01em;margin-top:2px}
+.info .big small{font-family:"Pretendard Variable",sans-serif;font-size:32px;font-weight:800;margin-left:4px}
+.info .fit{margin-top:10px;font-size:18px;font-weight:700}
+.info .why{margin-top:6px;color:var(--steel);font-size:15.5px}
+.spec{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.spec li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:16px}
+.spec li span{color:var(--steel)}
+.spec li b{font-weight:700;text-align:right}
+.info .btn{margin-top:24px}
+
+/* 톤수 계산 */
+.calc{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:24px 36px;align-items:center;padding:26px 32px;background:var(--ink);color:#fff;border-radius:8px}
+.calc h3{font-size:20px;font-weight:800}
+.calc p{color:#b9c5d2;font-size:15px;margin-top:4px;max-width:20em}
+.calc form{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px}
+.calc label{display:grid;gap:6px;font-size:14px;color:#cfd8e2}
+.calc input{width:132px;height:48px;border-radius:6px;border:0;padding:0 12px;font-size:18px;font-weight:700;color:var(--ink)}
+.calc output{flex:1 1 240px;min-height:48px;display:flex;align-items:center;padding:8px 16px;border-radius:6px;background:var(--yellow);color:var(--ink);font-weight:800;font-size:17px}
+
+/* 2단 분리형 */
+.split{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start;margin-top:44px}
+.split video{width:100%;border-radius:8px;background:#000;aspect-ratio:16/9}
+.steps{margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{padding-top:0}
+.steps li::before{content:counter(s);font-family:var(--num);font-size:40px;font-weight:700;line-height:1;color:var(--blue)}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--steel);font-size:15.5px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.strip img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+
+/* 특징 */
+.feat{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:44px}
+.feat figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:var(--ink)}
+.feat img,.feat video{width:100%;height:100%;object-fit:cover}
+.feat figcaption{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;color:#fff;background:linear-gradient(transparent,rgba(13,24,38,.9))}
+.feat figcaption b{display:block;font-size:20px;font-weight:800}
+.feat figcaption span{font-size:15px;color:#d9e1ea}
+.f-a{grid-column:span 7;aspect-ratio:7/5}
+.f-b{grid-column:span 5;aspect-ratio:1/1}
+.f-c{grid-column:span 4;aspect-ratio:4/3}
+.f-d{grid-column:span 4;aspect-ratio:4/3}
+.f-e{grid-column:span 4;aspect-ratio:4/3}
+
+/* 규격표 */
+.tablebox{margin-top:36px;overflow-x:auto;border:2px solid var(--ink);border-radius:8px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:720px;font-size:16px}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th{background:var(--ink);color:#fff;font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+tbody td:first-child{font-family:var(--num);font-size:26px;font-weight:700}
+tbody tr.on{background:#eaf2fd}
+tbody tr.on td:first-child{color:var(--blue)}
+.note{margin-top:12px;font-size:14px;color:var(--steel)}
+
+/* 질문 */
+.faq{margin-top:32px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-size:18px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:28px;font-weight:400;color:var(--blue)}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 22px;color:var(--steel);max-width:44em}
+
+/* 문의 */
+.ask{background:var(--blue);color:#fff}
+.ask .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.ask .lead{color:#dbe7f8}
+.ask .direct{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.form{background:#fff;color:var(--ink);border-radius:8px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:6px;font-size:14.5px;font-weight:700}
+.form .full{grid-column:1/-1}
+.form input,.form select,.form textarea{width:100%;min-height:48px;border:1.5px solid var(--line);border-radius:6px;padding:10px 12px;font-size:16px;background:#fff}
+.form textarea{min-height:104px;resize:vertical}
+.form .btn{width:100%}
+.done{grid-column:1/-1;padding:16px;border-radius:6px;background:var(--concrete);font-size:15px;white-space:pre-line}
+.done[hidden]{display:none}
+
+footer{background:var(--ink);color:#aab6c3;padding:40px 0;font-size:14px}
+footer b{color:#fff;font-size:16px}
+
+/* 휴대폰 */
+@media (max-width:860px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .sec{padding:64px 0}
+  .hero h1{max-width:none}
+  .tons{gap:6px}
+  .tons button{height:78px;font-size:36px}
+  .tons button small{font-size:13px}
+  .panel{grid-template-columns:1fr}
+  .draw{border-right:0;border-bottom:2px solid var(--ink);padding:18px 14px 12px}
+  .info{padding:24px 20px 26px}
+  .info .big{font-size:88px}
+  .calc{grid-template-columns:1fr;padding:22px 20px}
+  .calc input{width:100%}
+  .calc label{flex:1 1 130px}
+  .split{grid-template-columns:1fr;gap:28px}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .feat{grid-template-columns:1fr;gap:12px}
+  .feat figure{grid-column:auto;aspect-ratio:4/3}
+  .ask .grid{grid-template-columns:1fr;gap:30px}
+  .form{grid-template-columns:1fr;padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* 제작 과정 촬영용: 뼈대만 보기 */
+.wire body,.wire .top,.wire .gray,.wire .ask,.wire footer,.wire .calc,.wire .hero,.wire .pick,.wire .draw,.wire thead th{background:#fff!important}
+.wire *{color:transparent!important;border-color:#c9d0d8!important;text-shadow:none!important}
+.wire img,.wire video,.wire svg{visibility:hidden}
+.wire .hero::after,.wire .stripe{display:none}
+.wire .hero,.wire .feat figure,.wire .split video,.wire .strip img,.wire .draw{background:#e4e8ed!important;visibility:visible}
+.wire h1,.wire h2,.wire h3,.wire .lead,.wire .hero p,.wire .steps b,.wire .steps span,.wire .faq summary,.wire .info .big,.wire .info .fit,.wire .info .why,.wire .spec b,.wire .spec span,.wire td,.wire th,.wire .nav a,.wire .brand,.wire label,.wire .note,.wire .calc p,.wire footer p{background:#cfd6de!important;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.wire h1,.wire h2,.wire .lead,.wire .hero p,.wire .info .big,.wire .info .fit,.wire .info .why{width:fit-content}
+.wire .btn,.wire .tons button,.wire .pick a,.wire input,.wire select,.wire textarea,.wire output{background:#b9c2cc!important;border-color:#b9c2cc!important}
+.wire .feat figcaption{background:none!important}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i><span data-site="name">이동식 도크</span></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#tons">톤수 고르기</a>
+      <a href="#split">2단 분리형</a>
+      <a href="#feature">특징</a>
+      <a href="#table">규격표</a>
+      <a href="#faq">자주 묻는 질문</a>
+    </nav>
+    <a class="btn btn-y" href="#ask">견적 문의</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/img/hero.jpg">
+    <source src="assets/video/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <h1>지게차가 컨테이너 안까지 그대로 올라갑니다</h1>
+    <p>도크가 없는 창고와 야적장에서 쓰는 이동식 도크입니다. 6톤부터 15톤까지, 차 바닥 높이에 맞춰 1.1~1.7m로 올리고 내립니다.</p>
+    <div class="acts">
+      <a class="btn btn-y" href="#tons">톤수 고르기</a>
+      <a class="btn btn-line" href="#split">2단 분리형 영상 보기</a>
+    </div>
+  </div>
+  <div class="pick">
+    <div class="wrap">
+      <span>바로 보기</span>
+      <a href="#tons" data-ton="6">6<small>톤</small></a>
+      <a href="#tons" data-ton="8">8<small>톤</small></a>
+      <a href="#tons" data-ton="10">10<small>톤</small></a>
+      <a href="#tons" data-ton="12">12<small>톤</small></a>
+      <a href="#tons" data-ton="15">15<small>톤</small></a>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
+
+<section class="sec" id="tons">
+  <div class="wrap">
+    <h2>몇 톤이 필요하세요?</h2>
+    <p class="lead">지게차 무게와 한 번에 싣는 짐 무게를 더한 값보다 큰 톤수를 고르면 됩니다. 숫자를 누르면 규격이 바뀝니다.</p>
+
+    <div class="tons" role="group" aria-label="톤수 선택">
+      <button type="button" data-ton="6" aria-pressed="false">6<small>톤</small></button>
+      <button type="button" data-ton="8" aria-pressed="false">8<small>톤</small></button>
+      <button type="button" data-ton="10" aria-pressed="true">10<small>톤</small></button>
+      <button type="button" data-ton="12" aria-pressed="false">12<small>톤</small></button>
+      <button type="button" data-ton="15" aria-pressed="false">15<small>톤</small></button>
+    </div>
+
+    <div class="panel" aria-live="polite">
+      <div class="draw">
+        <svg viewBox="0 0 690 300" role="img" aria-label="이동식 도크 옆모습 치수 그림">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#17212c"/></marker>
+          </defs>
+          <!-- 바닥 -->
+          <line x1="20" y1="236" x2="676" y2="236" stroke="#17212c" stroke-width="2"/>
+          <!-- 컨테이너 -->
+          <rect x="562" y="76" width="112" height="74" fill="none" stroke="#5b6b7b" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="618" y="118" text-anchor="middle" font-size="14" fill="#5b6b7b" font-weight="700">컨테이너</text>
+          <!-- 경사로 본체 -->
+          <path d="M40 236 L46 228 L410 150 L558 150 L558 166 L410 166 L60 240 Z" fill="#1560c4"/>
+          <!-- 난간 -->
+          <path d="M120 198 L410 136 L556 136" fill="none" stroke="#1560c4" stroke-width="4"/>
+          <g stroke="#1560c4" stroke-width="3"><line x1="180" y1="186" x2="180" y2="200"/><line x1="260" y1="169" x2="260" y2="183"/><line x1="340" y1="152" x2="340" y2="166"/><line x1="440" y1="136" x2="440" y2="150"/><line x1="510" y1="136" x2="510" y2="150"/></g>
+          <!-- 연결부 -->
+          <line x1="376" y1="126" x2="376" y2="190" stroke="#f6b900" stroke-width="3" stroke-dasharray="7 5"/>
+          <text x="376" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#8a6800">연결부</text>
+          <!-- 다리·바퀴 -->
+          <g stroke="#0c3f8a" stroke-width="6" stroke-linecap="round"><line x1="430" y1="166" x2="418" y2="214"/><line x1="530" y1="166" x2="530" y2="234"/></g>
+          <circle cx="416" cy="220" r="16" fill="#17212c"/><circle cx="416" cy="220" r="6" fill="#eef0f2"/>
+          <!-- 지게차 -->
+          <g id="lift" transform="translate(238 108) rotate(-12)">
+            <rect x="0" y="14" width="46" height="26" rx="3" fill="#f6b900"/>
+            <path d="M8 14 L8 -8 L34 -8 L40 14" fill="none" stroke="#17212c" stroke-width="3"/>
+            <line x1="50" y1="-16" x2="50" y2="40" stroke="#17212c" stroke-width="4"/>
+            <line x1="50" y1="36" x2="76" y2="36" stroke="#17212c" stroke-width="4"/>
+            <rect x="54" y="12" width="22" height="22" fill="#b98a4a"/>
+            <circle cx="10" cy="42" r="8" fill="#17212c"/><circle cx="38" cy="42" r="8" fill="#17212c"/>
+          </g>
+          <text id="liftTxt" x="300" y="78" text-anchor="middle" font-size="15" font-weight="800" fill="#17212c">지게차 + 짐 10톤까지</text>
+          <!-- 치수선: 길이 -->
+          <line x1="40" y1="270" x2="558" y2="270" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+          <line x1="40" y1="244" x2="40" y2="278" stroke="#17212c"/><line x1="558" y1="240" x2="558" y2="278" stroke="#17212c"/>
+          <rect x="246" y="258" width="106" height="24" fill="#f8fafc"/>
+          <text x="299" y="276" text-anchor="middle" font-size="16" font-weight="800" fill="#17212c">길이 11.15m</text>
+          <!-- 치수선: 높이 -->
+          <line x1="584" y1="154" x2="584" y2="232" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+          <text x="594" y="190" font-size="15" font-weight="800" fill="#17212c">높이</text>
+          <text x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.7m</text>
+        </svg>
+        <p class="cap">폭 2.1m. 높이는 손 펌프로 맞춥니다.</p>
+      </div>
+      <div class="info">
+        <p class="model" id="iModel">DCQY-10T</p>
+        <p class="big"><span id="iTon">10</span><small>톤</small></p>
+        <p class="fit" id="iFit">3톤 지게차 작업에 맞습니다</p>
+        <p class="why" id="iWhy">예: 지게차 4.3톤 + 짐 3톤 = 7.3톤. 여유를 두고 고르는 규격입니다.</p>
+        <ul class="spec">
+          <li><span>올릴 수 있는 무게</span><b id="iCap">10톤</b></li>
+          <li><span>높이 조절</span><b>1.1 ~ 1.7m</b></li>
+          <li><span>크기 (길이×폭×높이)</span><b>11.15 × 2.1 × 1.1m</b></li>
+          <li><span>본체 무게</span><b id="iW">2,400kg</b></li>
+          <li><span>올리는 방식</span><b>수동 유압 펌프 (전기 필요 없음)</b></li>
+        </ul>
+        <a class="btn btn-b" href="#ask" id="iAsk">10톤 견적 문의하기</a>
+      </div>
+    </div>
+
+    <div class="calc">
+      <div>
+        <h3>톤수 계산해 보기</h3>
+        <p>지게차 제원표에 있는 자체 중량을 넣으세요.</p>
+      </div>
+      <form id="calc" onsubmit="return false">
+        <label>지게차 무게(톤)<input type="number" id="cF" min="0" step="0.1" value="4.3" inputmode="decimal"></label>
+        <label>한 번에 싣는 짐(톤)<input type="number" id="cL" min="0" step="0.1" value="3" inputmode="decimal"></label>
+        <output id="cOut" for="cF cL">합계 7.3톤 → 10톤을 권합니다</output>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray" id="split">
+  <div class="wrap">
+    <h2>두 토막으로 나눠 옮기고, 현장에서 맞붙입니다</h2>
+    <p class="lead">2단 분리형은 경사 부분과 받침 부분이 따로 옵니다. 지게차 한 대로 들어서 끼우면 끝납니다. 아래는 실제 조립 영상입니다.</p>
+    <div class="split">
+      <video controls muted playsinline preload="metadata" poster="assets/img/video-poster.jpg">
+        <source src="assets/video/split-type.mp4" type="video/mp4">
+      </video>
+      <ol class="steps">
+        <li><div><b>받침 부분을 세웁니다</b><span>바퀴와 다리가 달린 쪽을 놓을 자리에 둡니다.</span></div></li>
+        <li><div><b>경사 부분을 지게차로 듭니다</b><span>포크로 떠서 받침 쪽으로 가져갑니다.</span></div></li>
+        <li><div><b>연결부에 끼워 내립니다</b><span>두 토막이 맞물리면 핀으로 고정합니다.</span></div></li>
+        <li><div><b>높이를 맞추고 씁니다</b><span>손 펌프로 차 바닥 높이에 맞춥니다.</span></div></li>
+      </ol>
+    </div>
+    <div class="strip">
+      <img src="assets/img/step2.jpg" alt="지게차로 경사 부분을 든 모습" loading="lazy">
+      <img src="assets/img/step4.jpg" alt="경사 부분을 받침 쪽으로 옮기는 모습" loading="lazy">
+      <img src="assets/img/step6.jpg" alt="두 토막을 맞붙이는 모습" loading="lazy">
+      <img src="assets/img/step8.jpg" alt="조립이 끝난 이동식 도크" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="feature">
+  <div class="wrap">
+    <h2>현장에서 따져 보는 다섯 가지</h2>
+    <div class="feat">
+      <figure class="f-a"><img src="assets/img/use1.jpg" alt="지게차가 이동식 도크로 컨테이너에 짐을 싣는 모습" loading="lazy"><figcaption><b>컨테이너 안까지 지게차로</b><span>사람이 나르던 일을 지게차 한 대가 합니다.</span></figcaption></figure>
+      <figure class="f-b"><video muted loop playsinline autoplay poster="assets/img/detail-poster.jpg"><source src="assets/video/detail.mp4" type="video/mp4"></video><figcaption><b>두꺼운 강철 뼈대</b><span>아래를 받치는 보강 구조와 공기 타이어.</span></figcaption></figure>
+      <figure class="f-c"><img src="assets/img/use3.jpg" alt="미끄럼 방지 격자 바닥" loading="lazy"><figcaption><b>미끄럽지 않은 격자 바닥</b><span>비 오는 날에도 바퀴가 잡힙니다.</span></figcaption></figure>
+      <figure class="f-d"><img src="assets/img/use2.jpg" alt="야외에서 컨테이너 차에 연결한 이동식 도크" loading="lazy"><figcaption><b>필요한 곳으로 옮겨서</b><span>고정 공사 없이 지게차로 끌어 옮깁니다.</span></figcaption></figure>
+      <figure class="f-e"><img src="assets/img/use4.jpg" alt="탑차에 연결한 이동식 도크" loading="lazy"><figcaption><b>전기 없이 높이 조절</b><span>손 펌프로 1.1~1.7m. 탑차·컨테이너 모두.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray" id="table">
+  <div class="wrap">
+    <h2>톤수별 규격표</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>톤수</th><th>모델</th><th>높이 조절</th><th>크기 (길이×폭×높이)</th><th>본체 무게</th><th>올리는 방식</th></tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+    <p class="note">제조사 공개 규격 기준입니다. 길이·폭·난간은 주문할 때 바꿀 수 있고, 2단 분리형은 사양에 따라 치수가 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq">
+      <details open><summary>전기가 없는 야적장에서도 쓸 수 있나요?</summary><p>네. 손으로 젓는 유압 펌프로 높이를 올리고 내리기 때문에 전기가 필요 없습니다.</p></details>
+      <details><summary>몇 톤을 골라야 할지 모르겠습니다.</summary><p>지게차 자체 무게에 한 번에 싣는 짐 무게를 더하세요. 그 값보다 큰 톤수 중에서 여유 있는 쪽을 고릅니다. 위쪽 계산기에 넣어 보시거나, 지게차 모델명을 알려 주시면 골라 드립니다.</p></details>
+      <details><summary>2단 분리형은 일반형과 무엇이 다른가요?</summary><p>경사 부분과 받침 부분이 나뉘어 있어 운반과 보관이 쉽습니다. 현장에서 지게차로 맞붙여 쓰고, 쓰는 방법은 일반형과 같습니다.</p></details>
+      <details><summary>길이나 폭을 바꿔서 주문할 수 있나요?</summary><p>가능합니다. 현장 폭, 차 종류, 지게차 크기를 알려 주시면 맞는 치수로 견적을 드립니다.</p></details>
+      <details><summary>옮길 때는 어떻게 하나요?</summary><p>바퀴가 달려 있어 지게차로 끌어서 옮깁니다. 고정 공사는 하지 않습니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec ask" id="ask">
+  <div class="wrap grid">
+    <div>
+      <h2>견적 문의</h2>
+      <p class="lead">톤수와 쓰실 곳을 알려 주시면 가격과 받는 날짜를 안내해 드립니다. 톤수를 모르셔도 괜찮습니다.</p>
+      <div class="direct">
+        <a class="btn btn-y" id="telBtn" href="#ask">전화로 문의</a>
+        <a class="btn btn-line" id="kakaoBtn" href="#ask">카카오톡 상담</a>
+      </div>
+    </div>
+    <form class="form" id="askForm">
+      <label>이름 또는 회사<input name="name" required autocomplete="organization"></label>
+      <label>연락처<input name="tel" type="tel" required autocomplete="tel" placeholder="010-0000-0000"></label>
+      <label>톤수<select name="ton" id="fTon"><option>6톤</option><option>8톤</option><option selected>10톤</option><option>12톤</option><option>15톤</option><option>아직 모름</option></select></label>
+      <label>쓰실 지역<input name="area" placeholder="예: 경기 남양주"></label>
+      <label class="full">궁금한 점<textarea name="msg" placeholder="지게차 종류, 싣는 물건, 필요한 수량 등"></textarea></label>
+      <div class="full"><button class="btn btn-b" type="submit">견적 문의 보내기</button></div>
+      <div class="done" id="done" hidden role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b data-site="name">이동식 도크</b></p>
+    <p id="bizInfo">상호 · 대표자 · 사업자등록번호 · 주소 · 전화번호는 정보를 받는 대로 넣습니다.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var D = {
+    6:  {w:"2,200kg", fit:"2톤 지게차 작업에 맞습니다",        why:"예: 지게차 3.3톤 + 짐 2톤 = 5.3톤. 가벼운 짐을 다루는 현장용입니다."},
+    8:  {w:"2,300kg", fit:"2.5톤 지게차 작업에 맞습니다",      why:"예: 지게차 3.7톤 + 짐 2.5톤 = 6.2톤. 일반 팔레트 작업에 씁니다."},
+    10: {w:"2,400kg", fit:"3톤 지게차 작업에 맞습니다",        why:"예: 지게차 4.3톤 + 짐 3톤 = 7.3톤. 여유를 두고 고르는 규격입니다."},
+    12: {w:"2,800kg", fit:"3.5톤 지게차 작업에 맞습니다",      why:"예: 지게차 4.8톤 + 짐 3.5톤 = 8.3톤. 무거운 팔레트를 자주 다룰 때 고릅니다."},
+    15: {w:"3,200kg", fit:"4.5~5톤 지게차 작업에 맞습니다",    why:"예: 지게차 7톤 + 짐 5톤 = 12톤. 중량물 현장용입니다."}
+  };
+  var order = [6,8,10,12,15];
+  var $ = function(id){ return document.getElementById(id); };
+
+  // 규격표
+  $("tb").innerHTML = order.map(function(t){
+    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>1.1 ~ 1.7m</td><td>11.15 × 2.1 × 1.1m</td><td>'+D[t].w+'</td><td>수동 유압 펌프</td></tr>';
+  }).join("");
+
+  function pick(t){
+    if(!D[t]) return;
+    document.querySelectorAll(".tons button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.ton == t ? "true" : "false"); });
+    $("iModel").textContent = "DCQY-" + t + "T";
+    $("iTon").textContent = t;
+    $("iFit").textContent = D[t].fit;
+    $("iWhy").textContent = D[t].why;
+    $("iCap").textContent = t + "톤";
+    $("iW").textContent = D[t].w;
+    $("iAsk").textContent = t + "톤 견적 문의하기";
+    $("liftTxt").textContent = "지게차 + 짐 " + t + "톤까지";
+    // 톤수가 커질수록 지게차 그림도 조금 커집니다
+    var s = 0.82 + order.indexOf(+t) * 0.09;
+    $("lift").setAttribute("transform", "translate(238 " + (116 - order.indexOf(+t) * 5) + ") rotate(-12) scale(" + s + ")");
+    document.querySelectorAll("#tb tr").forEach(function(r){ r.classList.toggle("on", r.dataset.ton == t); });
+    $("fTon").value = t + "톤";
+  }
+  document.querySelectorAll("[data-ton]").forEach(function(el){
+    if(el.tagName === "TR") return;
+    el.addEventListener("click", function(){ pick(el.dataset.ton); });
+  });
+
+  // 톤수 계산
+  function calc(){
+    var f = parseFloat($("cF").value) || 0, l = parseFloat($("cL").value) || 0, sum = Math.round((f + l) * 10) / 10;
+    if(!sum){ $("cOut").textContent = "무게를 넣어 주세요"; return; }
+    var rec = order.filter(function(t){ return t >= sum * 1.2; })[0];
+    $("cOut").textContent = rec ? "합계 " + sum + "톤 → " + rec + "톤을 권합니다" : "합계 " + sum + "톤 → 15톤이 넘습니다. 따로 문의해 주세요";
+  }
+  $("cF").addEventListener("input", calc); $("cL").addEventListener("input", calc);
+
+  // 상호·전화
+  document.querySelectorAll("[data-site=name]").forEach(function(e){ e.textContent = SITE.name; });
+  if(SITE.tel){ $("telBtn").href = "tel:" + SITE.tel.replace(/[^0-9+]/g, ""); $("telBtn").textContent = "전화 " + SITE.tel; }
+  if(SITE.kakao){ $("kakaoBtn").href = SITE.kakao; } else { $("kakaoBtn").hidden = true; }
+
+  // 문의
+  $("askForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = new FormData(e.target), text = "[이동식 도크 견적 문의]\n이름/회사: " + f.get("name") + "\n연락처: " + f.get("tel") + "\n톤수: " + f.get("ton") + "\n지역: " + (f.get("area") || "-") + "\n내용: " + (f.get("msg") || "-");
+    var box = $("done"); box.hidden = false;
+    if(SITE.endpoint){
+      var btn = e.target.querySelector("button[type=submit]"), data = new URLSearchParams();
+      Object.keys(SITE.fields).forEach(function(k){ data.append(SITE.fields[k], f.get(k) || ""); });
+      box.textContent = "보내는 중입니다…"; btn.disabled = true;
+      fetch(SITE.endpoint, {method:"POST", mode:"no-cors", body:data})
+        .then(function(){ box.textContent = "문의를 보냈습니다. 확인하는 대로 연락드리겠습니다."; e.target.reset(); pick(10); })
+        .catch(function(){ box.textContent = "보내지 못했습니다. 인터넷 연결을 확인하고 다시 눌러 주세요.\n\n" + text; })
+        .then(function(){ btn.disabled = false; });
+    } else {
+      box.textContent = "문의 내용을 정리했습니다. 아래 내용을 전화나 문자로 알려 주세요.\n\n" + text;
+    }
+  });
+
+  // 주소 뒤에 ?ton=12 처럼 붙이면 그 톤수로 시작 / 제작 과정 촬영용 옵션
+  var q = new URLSearchParams(location.search);
+  if(q.get("stage") === "wire") document.documentElement.classList.add("wire");
+  if(q.get("stage") === "plain") document.getElementById("main").disabled = true;
+  if(q.get("shot")){ document.querySelectorAll("video").forEach(function(v){ var im = new Image(); im.src = v.poster; im.className = v.className + " hero-still"; im.style.cssText = v.closest(".hero") ? "" : "width:100%;height:100%;object-fit:cover;border-radius:inherit"; if(!v.closest(".hero")) im.className = ""; v.replaceWith(im); }); document.querySelectorAll("img[loading]").forEach(function(i){ i.loading = "eager"; }); }
+  pick(q.get("ton") || 10); calc();
+  function mark(){ var e = document.documentElement; e.dataset.h = e.scrollHeight; e.dataset.ty = Math.round($("tons").getBoundingClientRect().top + window.scrollY); }
+  mark(); window.addEventListener("load", mark);
+})();
+</script>
+</body>
+</html>
