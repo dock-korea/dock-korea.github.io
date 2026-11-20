@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이동식 도크 6톤~15톤 | 기본형·2단 분리형 컨테이너 상하차 경사로</title>
-<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 기본형과 2단 분리형, 6·8·10·12·15톤, 높이 1.1~1.7m 조절.">
+<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 기본형과 2단 분리형, 6·8·10·12·15톤, 수동 유압으로 높이 1.1~1.7m 조절.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap">
@@ -86,6 +86,22 @@ button,input,select,textarea{font:inherit;color:inherit}
 .types .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .btn-o{border-color:var(--ink);color:var(--ink);background:#fff}
 .btn-o:hover{background:var(--concrete)}
+
+/* 수동 유압 */
+.hyd{background:var(--ink);color:#fff}
+.hyd .lead{color:#c5d0dc}
+.hyd .grid{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center}
+.hyd ul{margin:30px 0 0;padding:0;list-style:none}
+.hyd li{position:relative;padding:15px 0 15px 30px;border-top:1px solid rgba(255,255,255,.16);font-size:18px;font-weight:700}
+.hyd li:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+.hyd li::before{content:"";position:absolute;left:0;top:22px;width:14px;height:14px;background:var(--yellow)}
+.hyd li span{display:block;margin-top:2px;font-size:15.5px;font-weight:400;color:#c5d0dc}
+.hyd .shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hyd figure{margin:0;position:relative;border-radius:8px;overflow:hidden}
+.hyd figure:first-child{grid-column:1/-1}
+.hyd img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover}
+.hyd figure:first-child img{aspect-ratio:16/8}
+.hyd figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 12px;font-size:15.5px;font-weight:700;background:linear-gradient(transparent,rgba(13,24,38,.94))}
 
 /* 톤수 고르기 */
 .tons{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:40px}
@@ -190,6 +206,7 @@ footer b{color:#fff;font-size:16px}
   .top .btn{margin-left:auto}
   .sec{padding:64px 0}
   .hero h1{max-width:none}
+  .hyd .grid{grid-template-columns:1fr;gap:30px}
   .types{grid-template-columns:1fr;gap:44px;margin-top:32px}
   .types h3{font-size:24px}
   .tons{gap:6px}
@@ -231,12 +248,13 @@ footer b{color:#fff;font-size:16px}
     <a class="brand" href="#top"><i></i><span data-site="name">이동식 도크</span></a>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#types">종류</a>
-      <a href="#tons">톤수 고르기</a>
+      <a href="#hyd">수동 유압</a>
+      <a href="#tons">톤수</a>
       <a href="#basic">기본형 영상</a>
       <a href="#split">2단 분리형 영상</a>
       <a href="#feature">특징</a>
       <a href="#table">규격표</a>
-      <a href="#faq">자주 묻는 질문</a>
+      <a href="#faq">질문</a>
     </nav>
     <a class="btn btn-y" href="#ask">견적 문의</a>
   </div>
@@ -249,7 +267,7 @@ footer b{color:#fff;font-size:16px}
   </video>
   <div class="wrap">
     <h1>지게차가 컨테이너 안까지 그대로 올라갑니다</h1>
-    <p>도크가 없는 창고와 야적장에서 쓰는 이동식 도크입니다. 기본형과 2단 분리형, 6톤부터 15톤까지 있고 차 바닥 높이에 맞춰 1.1~1.7m로 올리고 내립니다.</p>
+    <p>도크가 없는 창고와 야적장에서 쓰는 이동식 도크입니다. 기본형과 2단 분리형, 6톤부터 15톤까지 있고, 수동 유압으로 차 바닥 높이(1.1~1.7m)에 맞춥니다.</p>
     <div class="acts">
       <a class="btn btn-y" href="#tons">톤수 고르기</a>
       <a class="btn btn-line" href="#split">2단 분리형 영상 보기</a>
@@ -277,7 +295,7 @@ footer b{color:#fff;font-size:16px}
         <img src="assets/img/basic.jpg" alt="한 몸으로 된 기본형 이동식 도크" loading="lazy">
         <figcaption>
           <h3>기본형</h3>
-          <p>경사와 받침이 한 몸으로 된 일체형입니다. 내려놓고 높이만 맞추면 바로 씁니다.</p>
+          <p>경사와 받침이 한 몸으로 된 일체형입니다. 내려놓고 유압으로 높이만 맞추면 바로 씁니다.</p>
           <ul>
             <li>조립 없이 바로 사용</li>
             <li>한곳에 두고 계속 쓰는 현장에</li>
@@ -297,6 +315,25 @@ footer b{color:#fff;font-size:16px}
           <div class="acts"><a class="btn btn-b" href="#ask" data-type="2단 분리형">2단 분리형 견적 문의</a><a class="btn btn-o" href="#split">조립 영상 보기</a></div>
         </figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec hyd" id="hyd">
+  <div class="wrap grid">
+    <div>
+      <h2>높이는 수동 유압으로 올립니다</h2>
+      <p class="lead">손잡이를 저으면 유압 실린더가 도크를 밀어 올립니다. 전기도 배터리도 쓰지 않습니다.</p>
+      <ul>
+        <li>전기가 필요 없는 수동 유압 펌프<span>전기가 없는 야적장에서도 그대로 씁니다.</span></li>
+        <li>손잡이를 저으면 유압으로 올라갑니다<span>한 사람이 손으로 올리고 내립니다.</span></li>
+        <li>차 바닥 높이 1.1~1.7m에 맞춥니다<span>컨테이너, 탑차, 화물차 높이에 맞게 조절합니다.</span></li>
+      </ul>
+    </div>
+    <div class="shots">
+      <figure><img src="assets/img/hyd-pump.jpg" alt="도크 옆에 달린 수동 유압 펌프와 손잡이" loading="lazy"><figcaption>수동 유압 펌프와 손잡이</figcaption></figure>
+      <figure><img src="assets/img/hyd-hand.jpg" alt="손잡이를 저어 유압으로 높이를 올리는 모습" loading="lazy"><figcaption>손으로 저어 올립니다</figcaption></figure>
+      <figure><img src="assets/img/hyd-cyl.jpg" alt="바퀴 쪽을 밀어 주는 유압 실린더" loading="lazy"><figcaption>바퀴 쪽을 미는 유압 실린더</figcaption></figure>
     </div>
   </div>
 </section>
@@ -356,7 +393,7 @@ footer b{color:#fff;font-size:16px}
           <text x="594" y="190" font-size="15" font-weight="800" fill="#17212c">높이</text>
           <text x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.7m</text>
         </svg>
-        <p class="cap">폭 2.2m. 높이는 손 펌프로 맞춥니다.</p>
+        <p class="cap">폭 2.2m. 높이는 수동 유압 펌프로 맞춥니다.</p>
       </div>
       <div class="info">
         <p class="model" id="iModel">DCQY-10T</p>
@@ -365,7 +402,7 @@ footer b{color:#fff;font-size:16px}
         <p class="why" id="iWhy">예: 지게차 4.3톤 + 짐 3톤 = 7.3톤. 여유를 두고 고르는 규격입니다.</p>
         <ul class="spec">
           <li><span>올릴 수 있는 무게</span><b id="iCap">10톤</b></li>
-          <li><span>높이 조절</span><b>1.1 ~ 1.7m</b></li>
+          <li><span>유압 높이 조절</span><b>1.1 ~ 1.7m</b></li>
           <li><span>크기 (길이×폭×높이)</span><b>11.15 × 2.2 × 1.1m</b></li>
           <li><span>본체 무게</span><b id="iW">2,400kg</b></li>
           <li><span>올리는 방식</span><b>수동 유압 펌프 (전기 필요 없음)</b></li>
@@ -398,7 +435,7 @@ footer b{color:#fff;font-size:16px}
       </video>
       <ol class="steps">
         <li><div><b>차 뒤에 맞춰 댑니다</b><span>바퀴가 달려 있어 지게차로 끌어서 자리를 잡습니다.</span></div></li>
-        <li><div><b>손 펌프로 높이를 올립니다</b><span>차 바닥 높이까지 맞춥니다. 전기는 필요 없습니다.</span></div></li>
+        <li><div><b>수동 유압 펌프로 높이를 올립니다</b><span>손잡이를 저으면 유압으로 올라갑니다. 전기는 필요 없습니다.</span></div></li>
         <li><div><b>걸침판을 걸고 체인으로 묶습니다</b><span>도크와 차가 벌어지지 않게 잡아 줍니다.</span></div></li>
         <li><div><b>지게차로 오르내립니다</b><span>컨테이너 안까지 그대로 들어갑니다.</span></div></li>
       </ol>
@@ -418,7 +455,7 @@ footer b{color:#fff;font-size:16px}
         <li><div><b>받침 부분을 세웁니다</b><span>바퀴와 다리가 달린 쪽을 놓을 자리에 둡니다.</span></div></li>
         <li><div><b>경사 부분을 지게차로 듭니다</b><span>포크로 떠서 받침 쪽으로 가져갑니다.</span></div></li>
         <li><div><b>연결부에 끼워 내립니다</b><span>두 토막이 맞물리면 핀으로 고정합니다.</span></div></li>
-        <li><div><b>높이를 맞추고 씁니다</b><span>손 펌프로 차 바닥 높이에 맞춥니다.</span></div></li>
+        <li><div><b>유압으로 높이를 맞추고 씁니다</b><span>수동 유압 펌프로 차 바닥 높이에 맞춥니다.</span></div></li>
       </ol>
     </div>
     <div class="strip">
@@ -438,7 +475,7 @@ footer b{color:#fff;font-size:16px}
       <figure class="f-b"><video muted loop playsinline autoplay poster="assets/img/detail-poster.jpg"><source src="assets/video/detail.mp4" type="video/mp4"></video><figcaption><b>두꺼운 강철 뼈대</b><span>아래를 받치는 보강 구조와 공기 타이어.</span></figcaption></figure>
       <figure class="f-c"><img src="assets/img/use3.jpg" alt="미끄럼 방지 격자 바닥" loading="lazy"><figcaption><b>미끄럽지 않은 격자 바닥</b><span>비 오는 날에도 바퀴가 잡힙니다.</span></figcaption></figure>
       <figure class="f-d"><img src="assets/img/use2.jpg" alt="야외에서 컨테이너 차에 연결한 이동식 도크" loading="lazy"><figcaption><b>필요한 곳으로 옮겨서</b><span>고정 공사 없이 지게차로 끌어 옮깁니다.</span></figcaption></figure>
-      <figure class="f-e"><img src="assets/img/use4.jpg" alt="탑차에 연결한 이동식 도크" loading="lazy"><figcaption><b>전기 없이 높이 조절</b><span>손 펌프로 1.1~1.7m. 탑차·컨테이너 모두.</span></figcaption></figure>
+      <figure class="f-e"><img src="assets/img/use4.jpg" alt="탑차에 연결한 이동식 도크" loading="lazy"><figcaption><b>전기 없이 유압으로 높이 조절</b><span>수동 유압 펌프로 1.1~1.7m. 탑차·컨테이너 모두.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -448,7 +485,7 @@ footer b{color:#fff;font-size:16px}
     <h2>톤수별 규격표</h2>
     <div class="tablebox">
       <table>
-        <thead><tr><th>톤수</th><th>모델</th><th>높이 조절</th><th>크기 (길이×폭×높이)</th><th>본체 무게</th><th>올리는 방식</th></tr></thead>
+        <thead><tr><th>톤수</th><th>모델</th><th>유압 높이 조절</th><th>크기 (길이×폭×높이)</th><th>본체 무게</th><th>올리는 방식</th></tr></thead>
         <tbody id="tb"></tbody>
       </table>
     </div>
