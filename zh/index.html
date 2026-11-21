@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移动式登车桥 6~15吨 | 标准型与两节折叠型集装箱装卸坡道</title>
+<meta name="description" content="在没有装卸平台的仓库和堆场，叉车可直接开进集装箱的移动式登车桥。标准型与两节折叠型，6/8/10/12/15吨，手动液压调节高度1.1~1.8米，宽2.2米。">
+<link rel="alternate" hreflang="ko" href="https://dock-korea.github.io/">
+<link rel="alternate" hreflang="en" href="https://dock-korea.github.io/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://dock-korea.github.io/zh/">
+<link rel="alternate" hreflang="x-default" href="https://dock-korea.github.io/">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap">
+<script>
+/* ───────── 여기만 고치면 됩니다 ───────── */
+var SITE = {
+  name: "移动式登车桥",          // 상호
+  tel: "",                      // 대표 전화 (예: "031-000-0000")
+  kakao: "",                    // 카카오톡 채널 주소
+  // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
+  endpoint: "https://docs.google.com/forms/d/e/1FAIpQLSemXc8IkjYKYkBPOfzdNQn_7CLXf5B5F1qgM8W7IElYtC2u9A/formResponse",
+  fields: { name: "entry.2145933058", tel: "entry.1032847968", ton: "entry.1619154672", area: "entry.1851190465", msg: "entry.1150018617" }
+};
+</script>
+<style id="main">
+:root{
+  --blue:#1560c4; --blue-deep:#0c3f8a; --yellow:#f6b900; --ink:#17212c;
+  --steel:#5b6b7b; --concrete:#eef0f2; --line:#d5dae0; --white:#fff;
+  --num:"Barlow Condensed","Pretendard Variable",sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Pretendard Variable",Pretendard,"Malgun Gothic",sans-serif;color:var(--ink);background:var(--white);line-height:1.65;word-break:keep-all}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{width:min(var(--wrap),100% - 40px);margin-inline:auto}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 18px,var(--ink) 18px 36px)}
+
+/* 머리말 */
+.top{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.brand i{width:30px;height:20px;background:var(--blue);clip-path:polygon(0 100%,62% 0,100% 0,100% 100%)}
+.nav{display:flex;gap:18px;margin-left:auto;font-size:15px;font-weight:600}
+.lang{display:flex;align-items:center;gap:2px;font-size:13px;font-weight:700;white-space:nowrap}
+.lang a{text-decoration:none;padding:6px 8px;border-radius:4px;color:var(--steel)}
+.lang a:hover{color:var(--blue)}
+.lang a[aria-current]{color:var(--ink);background:var(--concrete)}
+.nav a{text-decoration:none;padding:6px 0}
+.nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:6px;border:2px solid transparent;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
+.btn-y{background:var(--yellow);color:var(--ink)}
+.btn-y:hover{background:#ffc91f}
+.btn-b{background:var(--blue);color:#fff}
+.btn-b:hover{background:var(--blue-deep)}
+.btn-line{border-color:#fff;color:#fff}
+.top .btn{min-height:40px;padding:0 16px;font-size:15px;white-space:nowrap}
+
+/* 첫 화면 */
+.hero{position:relative;height:clamp(560px,92vh,820px);color:#fff;background:var(--ink);overflow:hidden}
+.hero video,.hero .hero-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,24,38,.88) 0%,rgba(13,24,38,.62) 46%,rgba(13,24,38,.12) 100%)}
+.hero > .wrap{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding-bottom:56px}
+.hero h1{font-size:clamp(34px,5.4vw,68px);line-height:1.14;font-weight:800;letter-spacing:-.025em;max-width:13em}
+.hero p{margin-top:22px;font-size:clamp(17px,1.6vw,21px);max-width:31em;color:#e3e9f0}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.pick{position:absolute;z-index:1;left:0;right:0;bottom:0;background:rgba(13,24,38,.82);border-top:1px solid rgba(255,255,255,.18)}
+.pick .wrap{display:flex;align-items:center;gap:18px;height:72px;overflow-x:auto}
+.pick span{font-weight:600;white-space:nowrap;color:#cfd8e2}
+.pick a{font-family:var(--num);font-size:30px;font-weight:700;text-decoration:none;white-space:nowrap;padding:4px 14px;border-radius:4px;line-height:1.2}
+.pick a small{font-family:"Pretendard Variable",sans-serif;font-size:15px;font-weight:600;margin-left:1px}
+.pick a:hover{background:var(--yellow);color:var(--ink)}
+
+/* 구역 공통 */
+.sec{padding:96px 0}
+.sec h2{font-size:clamp(28px,3.4vw,42px);line-height:1.2;font-weight:800;letter-spacing:-.02em}
+.sec .lead{margin-top:14px;font-size:18px;color:var(--steel);max-width:34em}
+.gray{background:var(--concrete)}
+
+/* 종류 */
+.types{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:44px}
+.types figure{margin:0}
+.types img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px}
+.types h3{margin-top:22px;font-size:28px;font-weight:800;letter-spacing:-.02em;padding-left:14px;border-left:6px solid var(--blue)}
+.types .two h3{border-left-color:var(--yellow)}
+.types p{margin-top:12px;font-size:17px;color:var(--steel);max-width:28em}
+.types ul{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.types li{padding:11px 0;border-bottom:1px solid var(--line);font-weight:700}
+.types .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn-o{border-color:var(--ink);color:var(--ink);background:#fff}
+.btn-o:hover{background:var(--concrete)}
+
+/* 수동 유압 */
+.hyd{background:var(--ink);color:#fff}
+.hyd .lead{color:#c5d0dc}
+.hyd .grid{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center}
+.hyd ul{margin:30px 0 0;padding:0;list-style:none}
+.hyd li{position:relative;padding:15px 0 15px 30px;border-top:1px solid rgba(255,255,255,.16);font-size:18px;font-weight:700}
+.hyd li:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+.hyd li::before{content:"";position:absolute;left:0;top:22px;width:14px;height:14px;background:var(--yellow)}
+.hyd li span{display:block;margin-top:2px;font-size:15.5px;font-weight:400;color:#c5d0dc}
+.hyd .shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hyd figure{margin:0;position:relative;border-radius:8px;overflow:hidden}
+.hyd figure:first-child{grid-column:1/-1}
+.hyd img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover}
+.hyd figure:first-child img{aspect-ratio:16/8}
+.hyd figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 12px;font-size:15.5px;font-weight:700;background:linear-gradient(transparent,rgba(13,24,38,.94))}
+
+/* 톤수 고르기 */
+.tons{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:40px}
+.tons button{height:112px;border:2px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font-family:var(--num);font-size:54px;font-weight:700;line-height:1;color:var(--steel);transition:background .15s,color .15s,border-color .15s}
+.tons button small{font-family:"Pretendard Variable",sans-serif;font-size:18px;font-weight:700;margin-left:2px}
+.tons button:hover{border-color:var(--blue);color:var(--blue)}
+.tons button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{display:grid;grid-template-columns:1.25fr 1fr;gap:0;margin-top:14px;background:#fff;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.draw{padding:28px 28px 18px;border-right:2px solid var(--ink);background:
+  linear-gradient(#e8eef6 1px,transparent 1px) 0 0/100% 28px,
+  linear-gradient(90deg,#e8eef6 1px,transparent 1px) 0 0/28px 100%,#f8fafc}
+.draw svg{width:100%;height:auto;display:block}
+.draw .cap{margin-top:8px;font-size:14px;color:var(--steel)}
+.info{padding:30px 32px 32px;display:flex;flex-direction:column}
+.info .model{font-weight:700;color:var(--blue)}
+.info .big{font-family:var(--num);font-size:108px;font-weight:700;line-height:.95;letter-spacing:-.01em;margin-top:2px}
+.info .big small{font-family:"Pretendard Variable",sans-serif;font-size:32px;font-weight:800;margin-left:4px}
+.info .fit{margin-top:10px;font-size:18px;font-weight:700}
+.info .why{margin-top:6px;color:var(--steel);font-size:15.5px}
+.spec{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.spec li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:16px}
+.spec li span{color:var(--steel)}
+.spec li b{font-weight:700;text-align:right}
+.info .btn{margin-top:24px}
+
+/* 톤수 계산 */
+.calc{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:24px 36px;align-items:center;padding:26px 32px;background:var(--ink);color:#fff;border-radius:8px}
+.calc h3{font-size:20px;font-weight:800}
+.calc p{color:#b9c5d2;font-size:15px;margin-top:4px;max-width:20em}
+.calc form{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px}
+.calc label{display:grid;gap:6px;font-size:14px;color:#cfd8e2}
+.calc input{width:132px;height:48px;border-radius:6px;border:0;padding:0 12px;font-size:18px;font-weight:700;color:var(--ink)}
+.calc output{flex:1 1 240px;min-height:48px;display:flex;align-items:center;padding:8px 16px;border-radius:6px;background:var(--yellow);color:var(--ink);font-weight:800;font-size:17px}
+
+/* 2단 분리형 */
+.split{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:start;margin-top:44px}
+.split video{width:100%;border-radius:8px;background:#000;aspect-ratio:16/9}
+.steps{margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{padding-top:0}
+.steps li::before{content:counter(s);font-family:var(--num);font-size:40px;font-weight:700;line-height:1;color:var(--blue)}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--steel);font-size:15.5px}
+.split.rev{grid-template-columns:1fr 1.35fr}
+.split.rev > :first-child{order:2;align-self:start}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.strip img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.strip figure{margin:0}
+.strip figcaption{margin-top:6px;font-size:14px;font-weight:700;color:var(--steel)}
+.split > img{width:100%;border-radius:8px;aspect-ratio:16/9;object-fit:cover;background:#fff}
+
+/* 색상과 도장 */
+#color{scroll-margin-top:96px}
+.colors{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.colors figure{margin:0}
+.colors img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.colors figcaption{margin-top:12px}
+.colors figcaption b{display:block;font-size:19px;font-weight:800}
+.colors figcaption span{display:block;margin-top:2px;font-size:15px;color:var(--steel)}
+.colors .ai b::after{content:"参考图";margin-left:8px;padding:2px 8px;border-radius:4px;background:var(--yellow);font-size:13px;font-weight:800;vertical-align:2px}
+.coat{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.coat h3{font-size:24px;font-weight:800;letter-spacing:-.01em}
+.coat p{margin-top:10px;color:var(--steel);font-size:16px}
+.coat figure{margin:0}
+.coat img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.coat figcaption{margin-top:6px;font-size:14px;font-weight:700}
+.dwg svg{display:block;width:100%;min-width:760px;height:auto}
+@media (prefers-reduced-motion:no-preference){.hero .hero-still{animation:heroIn 22s ease-out both}}
+@keyframes heroIn{from{transform:scale(1.07)}to{transform:scale(1)}}
+@media (max-width:860px){#color{scroll-margin-top:64px}.colors{grid-template-columns:1fr}.coat{grid-template-columns:1fr 1fr}.coat > div{grid-column:1/-1}}
+
+/* 특징 */
+.feat{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:44px}
+.feat figure{margin:0;position:relative;border-radius:8px;overflow:hidden;background:var(--ink)}
+.feat img,.feat video{width:100%;height:100%;object-fit:cover}
+.feat figcaption{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;color:#fff;background:linear-gradient(transparent,rgba(13,24,38,.9))}
+.feat figcaption b{display:block;font-size:19px;font-weight:800}
+.feat figcaption span{font-size:15px;color:#d9e1ea}
+.feat figure{grid-column:span 4;aspect-ratio:4/3}
+.lead-item{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center;margin-top:44px}
+.lead-item + .lead-item{margin-top:64px}
+.lead-item.rev{grid-template-columns:5fr 7fr}
+.feat.four figure{grid-column:span 3;aspect-ratio:1/1}
+.feat.four figcaption{padding:48px 16px 16px}
+.feat.four figcaption b{font-size:17px}
+.feat.four figcaption span{font-size:14px}
+.lead-item.rev > :first-child{order:2}
+.lead-item img,.lead-item video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--ink)}
+.lead-item img{aspect-ratio:4/3}
+.lead-item h3{font-size:30px;font-weight:800;line-height:1.25;letter-spacing:-.02em}
+.lead-item p{margin-top:12px;font-size:17px;color:var(--steel)}
+.lead-item ul{margin:20px 0 0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.lead-item li{padding:12px 0;border-bottom:1px solid var(--line);font-weight:700}
+.sub{margin-top:72px;font-size:24px;font-weight:800;letter-spacing:-.01em}
+.sub + .feat{margin-top:24px}
+.specs{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;margin:20px 0 0;border-top:2px solid var(--ink)}
+.specs div{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.specs dt{color:var(--steel);white-space:nowrap}
+.specs dd{margin:0;font-weight:700;text-align:right}
+.specs dd small{display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.55;color:var(--steel)}
+.dwg{margin:20px 0 0}
+.dwg .scroll{overflow-x:auto;border:2px solid var(--ink);border-radius:8px;background:#fff}
+.dwg img{width:100%;min-width:760px}
+.dwg figcaption{margin-top:10px;font-size:14px;color:var(--steel)}
+.steps.tight li{padding:13px 0}
+.steps.tight li::before{font-size:32px}
+.steps.tight b{font-size:17px}
+
+/* 규격표 */
+.tablebox{margin-top:36px;overflow-x:auto;border:2px solid var(--ink);border-radius:8px;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:720px;font-size:16px}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th{background:var(--ink);color:#fff;font-weight:700}
+tbody tr:last-child td{border-bottom:0}
+tbody td:first-child{font-family:var(--num);font-size:26px;font-weight:700}
+tbody tr.on{background:#eaf2fd}
+tbody tr.on td:first-child{color:var(--blue)}
+.note{margin-top:12px;font-size:14px;color:var(--steel)}
+
+/* 질문 */
+.faq{margin-top:32px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-size:18px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:28px;font-weight:400;color:var(--blue)}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 22px;color:var(--steel);max-width:44em}
+
+/* 문의 */
+.ask{background:var(--blue);color:#fff}
+.ask .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.ask .lead{color:#dbe7f8}
+.ask .direct{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.form{background:#fff;color:var(--ink);border-radius:8px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:6px;font-size:14.5px;font-weight:700}
+.form .full{grid-column:1/-1}
+.form input,.form select,.form textarea{width:100%;min-height:48px;border:1.5px solid var(--line);border-radius:6px;padding:10px 12px;font-size:16px;background:#fff}
+.form textarea{min-height:104px;resize:vertical}
+.form .btn{width:100%}
+.done{grid-column:1/-1;padding:16px;border-radius:6px;background:var(--concrete);font-size:15px;white-space:pre-line}
+.done[hidden]{display:none}
+
+footer{background:var(--ink);color:#aab6c3;padding:40px 0;font-size:14px}
+footer b{color:#fff;font-size:16px}
+
+/* 휴대폰 */
+@media (max-width:860px){
+  .nav{display:none}
+  .top .wrap{gap:10px}
+  .brand{font-size:16px;gap:8px}
+  .brand i{width:24px;height:16px}
+  .lang{margin-left:auto;font-size:12px}
+  .lang a{padding:5px 5px}
+  .lang a[aria-current]{display:none}
+  .top .btn{margin-left:0;padding:0 10px;font-size:14px}
+  .sec{padding:64px 0}
+  .hero h1{max-width:none}
+  .hyd .grid{grid-template-columns:1fr;gap:30px}
+  .types{grid-template-columns:1fr;gap:44px;margin-top:32px}
+  .types h3{font-size:24px}
+  .tons{gap:6px}
+  .tons button{height:78px;font-size:36px}
+  .tons button small{font-size:13px}
+  .panel{grid-template-columns:1fr}
+  .draw{border-right:0;border-bottom:2px solid var(--ink);padding:18px 14px 12px}
+  .info{padding:24px 20px 26px}
+  .info .big{font-size:88px}
+  .calc{grid-template-columns:1fr;padding:22px 20px}
+  .calc input{width:100%}
+  .calc label{flex:1 1 130px}
+  .split,.split.rev{grid-template-columns:1fr;gap:28px}
+  .split.rev > :first-child{order:0}
+  .strip{grid-template-columns:repeat(2,1fr)}
+  .lead-item,.lead-item.rev{grid-template-columns:1fr;gap:20px;margin-top:36px}
+  .lead-item.rev > :first-child{order:0}
+  .lead-item h3{font-size:24px}
+  .sub{margin-top:52px;font-size:21px}
+  .specs{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr;gap:12px}
+  .feat figure{grid-column:auto;aspect-ratio:4/3}
+  .ask .grid{grid-template-columns:1fr;gap:30px}
+  .form{grid-template-columns:1fr;padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* 제작 과정 촬영용: 뼈대만 보기 */
+.wire body,.wire .top,.wire .gray,.wire .ask,.wire footer,.wire .calc,.wire .hero,.wire .pick,.wire .draw,.wire thead th{background:#fff!important}
+.wire *{color:transparent!important;border-color:#c9d0d8!important;text-shadow:none!important}
+.wire svg{visibility:hidden}
+.wire img,.wire video{filter:brightness(0) invert(.88)}
+.wire .hyd,.wire .tablebox,.wire .dwg .scroll{background:#fff!important}
+.wire h3,.wire .lead-item p,.wire .lead-item li,.wire .hyd li,.wire .hyd li span,.wire .types p,.wire .types li,.wire dt,.wire dd,.wire figcaption b,.wire figcaption span,.wire figcaption{background:#cfd6de!important;border-radius:4px}
+.wire .hyd li::before{background:#b9c2cc!important}
+.wire .hero::after,.wire .stripe{display:none}
+.wire .hero,.wire .feat figure,.wire .split video,.wire .strip img,.wire .draw{background:#e4e8ed!important;visibility:visible}
+.wire h1,.wire h2,.wire h3,.wire .lead,.wire .hero p,.wire .steps b,.wire .steps span,.wire .faq summary,.wire .info .big,.wire .info .fit,.wire .info .why,.wire .spec b,.wire .spec span,.wire td,.wire th,.wire .nav a,.wire .brand,.wire label,.wire .note,.wire .calc p,.wire footer p{background:#cfd6de!important;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.wire h1,.wire h2,.wire .lead,.wire .hero p,.wire .info .big,.wire .info .fit,.wire .info .why{width:fit-content}
+.wire .btn,.wire .tons button,.wire .pick a,.wire input,.wire select,.wire textarea,.wire output{background:#b9c2cc!important;border-color:#b9c2cc!important}
+.wire .feat figcaption{background:none!important}
+
+/* Chinese page */
+body{word-break:normal;line-break:strict;font-family:"Pretendard Variable",Pretendard,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i><span data-site="name">移动式登车桥</span></a>
+    <nav class="nav" aria-label="主菜单">
+      <a href="#types">类型</a>
+      <a href="#hyd">手动液压</a>
+      <a href="#feature">特点</a>
+      <a href="#color">颜色</a>
+      <a href="#tons">吨位</a>
+      <a href="#basic">使用步骤</a>
+      <a href="#split">两节折叠型</a>
+      <a href="#table">规格图纸</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="lang" aria-label="语言"><a href="../" lang="ko" hreflang="ko">한국어</a><a href="../en/" lang="en" hreflang="en">EN</a><a href="./" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a></div>
+    <a class="btn btn-y" href="#ask">询价</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <img class="hero-still" src="../assets/img/p-hero.jpg" alt="叉车沿移动式登车桥开进集装箱" fetchpriority="high">
+  <div class="wrap">
+    <h1>叉车直接开进集装箱</h1>
+    <p>适用于没有装卸平台的仓库和堆场的移动式登车桥。有标准型和两节折叠型，6吨到15吨，用手动液压调到车厢底板高度（1.1~1.8米）。所有型号宽度均为2.2米。</p>
+    <div class="acts">
+      <a class="btn btn-y" href="#tons">选择吨位</a>
+      <a class="btn btn-line" href="#basic">查看标准型</a>
+      <a class="btn btn-line" href="#split">查看两节折叠型</a>
+    </div>
+  </div>
+  <div class="pick">
+    <div class="wrap">
+      <span>快速查看</span>
+      <a href="#tons" data-ton="6">6<small>吨</small></a>
+      <a href="#tons" data-ton="8">8<small>吨</small></a>
+      <a href="#tons" data-ton="10">10<small>吨</small></a>
+      <a href="#tons" data-ton="12">12<small>吨</small></a>
+      <a href="#tons" data-ton="15">15<small>吨</small></a>
+    </div>
+  </div>
+</section>
+<div class="stripe" aria-hidden="true"></div>
+
+<section class="sec" id="types">
+  <div class="wrap">
+    <h2>标准型和两节折叠型，共两种</h2>
+    <p class="lead">使用方法相同，区别在于运输、摆放和存放方式。</p>
+    <div class="types">
+      <figure>
+        <img src="../assets/img/p-basic.jpg" alt="搭在集装箱上的标准型移动式登车桥" loading="lazy">
+        <figcaption>
+          <h3>标准型</h3>
+          <p>坡面和支撑架为一体式结构。放下后用液压调好高度即可使用。</p>
+          <ul>
+            <li>无需组装，直接使用</li>
+            <li>适合固定在一处长期使用的场地</li>
+          </ul>
+          <div class="acts"><a class="btn btn-b" href="#ask" data-type="标准型">标准型询价</a><a class="btn btn-o" href="#basic">查看使用步骤</a></div>
+        </figcaption>
+      </figure>
+      <figure class="two">
+        <img src="../assets/img/p-split.jpg" alt="坡面段叠在支撑段上的两节折叠型登车桥" loading="lazy">
+        <figcaption>
+          <h3>两节折叠型</h3>
+          <p>坡面段叠放在支撑段上面运来。到现场后用叉车吊起并连接使用。</p>
+          <ul>
+            <li>折叠后长5.75米，便于运输和存放</li>
+            <li>一台叉车即可在现场展开</li>
+          </ul>
+          <div class="acts"><a class="btn btn-b" href="#ask" data-type="两节折叠型">两节折叠型询价</a><a class="btn btn-o" href="#split">查看展开步骤</a></div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec hyd" id="hyd">
+  <div class="wrap grid">
+    <div>
+      <h2>用手动液压升降高度</h2>
+      <p class="lead">摇动手柄，两个液压油缸把登车桥顶起。不用电，也不用电池。</p>
+      <ul>
+        <li>无需电源的手动液压泵<span>没有电的堆场也能照常使用。</span></li>
+        <li>两个直径80mm液压油缸<span>摇动手柄，油缸推动车轮轴，登车桥随之升高。</span></li>
+        <li>适配1.1~1.8米的车厢底板高度<span>松开阀门即可下降。12吨和15吨为1.2~1.8米。</span></li>
+        <li>32MPa高压油管<span>登车桥专用一体手压泵与油缸之间用高压油管连接。</span></li>
+      </ul>
+    </div>
+    <div class="shots">
+      <figure><img src="../assets/img/p-cyl.jpg" alt="出厂前包装好的液压油缸和操作说明贴纸" loading="lazy"><figcaption>液压油缸（出厂前包装状态）</figcaption></figure>
+      <figure><img src="../assets/img/p-pump.jpg" alt="装在登车桥侧面的手动液压泵" loading="lazy"><figcaption>登车桥专用手动液压泵</figcaption></figure>
+      <figure><img src="../assets/img/p-handle.jpg" alt="插在登车桥侧面的液压泵手柄" loading="lazy"><figcaption>插在侧面的泵手柄</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="feature">
+  <div class="wrap">
+    <h2>最先要看的三点</h2>
+    <div class="lead-item">
+      <img src="../assets/img/p-frame.jpg" alt="除锈后、喷漆前的钢架" loading="lazy">
+      <div>
+        <h3>厚实的钢结构</h3>
+        <p>这是喷漆前的钢架。纵向5根主梁贯通，横撑间距约40厘米，排布紧密。</p>
+        <ul>
+          <li>主梁：160×80×4mm + 120×60×4mm矩管，共5根（10吨）</li>
+          <li>副梁：100×50×4mm矩管</li>
+          <li>台面：4mm钢板 + 8mm菱形钢板网</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-item rev">
+      <img src="../assets/img/p-container.jpg" alt="按集装箱底板高度搭好的移动式登车桥" loading="lazy">
+      <div>
+        <h3>不用电，液压调高</h3>
+        <p>摇动手动液压泵的手柄，登车桥就会升起。不需要电源和电池，堆场任何地方都能用。</p>
+        <ul>
+          <li>手动液压泵调节1.1~1.8米</li>
+          <li>一个人手动即可升降</li>
+          <li>适配集装箱、厢式货车和货车的高度</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lead-item">
+      <img src="../assets/img/p-tire.jpg" alt="出厂前的实心轮胎和车轮轴架" loading="lazy">
+      <div>
+        <h3>不怕扎胎的实心轮胎</h3>
+        <p>实心橡胶轮胎不会爆胎。两个液压油缸推动这根车轮轴升起登车桥，移动时也靠这对轮子拖行。</p>
+        <ul>
+          <li>实心轮胎：6~10吨用600-9，12~15吨用700-9</li>
+          <li>液压油缸：直径80mm × 2个</li>
+          <li>标配阻车器</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="sub">其他六个细节</h3>
+    <div class="feat six">
+      <figure><img src="../assets/img/p-tail.jpg" alt="接地端的尾板" loading="lazy"><figcaption><b>800mm尾板</b><span>接地一端的踏板，叉车从地面平稳驶上。</span></figcaption></figure>
+      <figure><img src="../assets/img/p-mesh.jpg" alt="铺有菱形防滑钢板网的台面" loading="lazy"><figcaption><b>防滑台面</b><span>4mm钢板上铺8mm菱形钢板网。</span></figcaption></figure>
+      <figure><img src="../assets/img/p-lip.jpg" alt="搭在车厢底板上的搭板和链条" loading="lazy"><figcaption><b>搭板和链条</b><span>搭板搭在车厢底板上，用焊在桥身上的挂钩挂链条固定。</span></figcaption></figure>
+      <figure><img src="../assets/img/p-leg.jpg" alt="转动手柄调节高度的支腿" loading="lazy"><figcaption><b>手摇支腿</b><span>2个支腿，行程400mm。12吨和15吨另加2个辅助支腿。</span></figcaption></figure>
+      <figure><img src="../assets/img/p-chock.jpg" alt="放在实心轮胎前的阻车器" loading="lazy"><figcaption><b>阻车器</b><span>使用时挡住车轮，防止登车桥移动。</span></figcaption></figure>
+      <figure><img src="../assets/img/p-towbar.jpg" alt="连接叉车的牵引杆接口" loading="lazy"><figcaption><b>叉车牵引杆</b><span>装上牵引杆，用叉车拖动转移。</span></figcaption></figure>
+    </div>
+
+    <div class="lead-item rev">
+      <img src="../assets/img/p-parts.jpg" alt="出厂前摆放的阻车器、液压油管、油缸、牵引杆和链条" loading="lazy">
+      <div>
+        <h3>随货配件</h3>
+        <p>阻车器、链条和牵引杆随登车桥一起发货。照片为出厂前摆放的配件。</p>
+        <ul>
+          <li>阻车器</li>
+          <li>挂车链条</li>
+          <li>叉车牵引杆</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="color">
+      <h3 class="sub">下单时可选择颜色</h3>
+      <p class="lead">标准颜色为蓝色。告诉我们想要的颜色，即按该颜色喷涂生产。</p>
+      <div class="colors">
+        <figure><img src="../assets/img/p-color-blue.jpg" alt="标准蓝色的两节折叠型登车桥" loading="lazy"><figcaption><b>标准蓝色</b><span>实拍产品照片。</span></figcaption></figure>
+        <figure class="ai"><img src="../assets/img/p-color-pink.jpg" alt="同一台登车桥改成粉色的参考图" loading="lazy"><figcaption><b>其他颜色示例</b><span>同一张照片用AI改色的参考图。实际颜色在下单前用色板确认。</span></figcaption></figure>
+      </div>
+      <div class="coat">
+        <div>
+          <h3>除锈后静电喷涂烤漆</h3>
+          <p>抛丸除锈后静电喷涂烤漆。工厂实测漆膜厚度为120~141µm。</p>
+        </div>
+        <figure><img src="../assets/img/p-coat-141.jpg" alt="用漆膜测厚仪测量侧面漆膜厚度" loading="lazy"><figcaption>侧面漆膜141µm</figcaption></figure>
+        <figure><img src="../assets/img/p-coat-2.jpg" alt="用漆膜测厚仪测量立柱漆膜厚度" loading="lazy"><figcaption>立柱漆膜测量</figcaption></figure>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gray" id="tons">
+  <div class="wrap">
+    <h2>您需要多少吨？</h2>
+    <p class="lead">选择大于叉车自重加单次载货重量的吨位。点击数字即可查看规格。</p>
+
+    <div class="tons" role="group" aria-label="选择吨位">
+      <button type="button" data-ton="6" aria-pressed="false">6<small>吨</small></button>
+      <button type="button" data-ton="8" aria-pressed="false">8<small>吨</small></button>
+      <button type="button" data-ton="10" aria-pressed="true">10<small>吨</small></button>
+      <button type="button" data-ton="12" aria-pressed="false">12<small>吨</small></button>
+      <button type="button" data-ton="15" aria-pressed="false">15<small>吨</small></button>
+    </div>
+
+    <div class="panel" aria-live="polite">
+      <div class="draw">
+        <svg viewBox="0 0 690 300" role="img" aria-label="移动式登车桥侧视尺寸示意图">
+          <defs>
+            <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#17212c"/></marker>
+          </defs>
+          <!-- 바닥 -->
+          <line x1="20" y1="236" x2="676" y2="236" stroke="#17212c" stroke-width="2"/>
+          <!-- 컨테이너 -->
+          <rect x="562" y="76" width="112" height="74" fill="none" stroke="#5b6b7b" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="618" y="118" text-anchor="middle" font-size="14" fill="#5b6b7b" font-weight="700">集装箱</text>
+          <!-- 경사로 본체 -->
+          <path d="M40 236 L46 228 L410 150 L558 150 L558 166 L410 166 L60 240 Z" fill="#1560c4"/>
+          <!-- 난간 -->
+          <path d="M120 198 L410 136 L556 136" fill="none" stroke="#1560c4" stroke-width="4"/>
+          <g stroke="#1560c4" stroke-width="3"><line x1="180" y1="186" x2="180" y2="200"/><line x1="260" y1="169" x2="260" y2="183"/><line x1="340" y1="152" x2="340" y2="166"/><line x1="440" y1="136" x2="440" y2="150"/><line x1="510" y1="136" x2="510" y2="150"/></g>
+          <!-- 연결부 -->
+          <line x1="376" y1="126" x2="376" y2="190" stroke="#f6b900" stroke-width="3" stroke-dasharray="7 5"/>
+          <text x="376" y="118" text-anchor="middle" font-size="13" font-weight="700" fill="#8a6800">连接处</text>
+          <!-- 다리·바퀴 -->
+          <g stroke="#0c3f8a" stroke-width="6" stroke-linecap="round"><line x1="430" y1="166" x2="418" y2="214"/><line x1="530" y1="166" x2="530" y2="234"/></g>
+          <circle cx="416" cy="220" r="16" fill="#17212c"/><circle cx="416" cy="220" r="6" fill="#eef0f2"/>
+          <!-- 지게차 -->
+          <g id="lift" transform="translate(238 108) rotate(-12)">
+            <rect x="0" y="14" width="46" height="26" rx="3" fill="#f6b900"/>
+            <path d="M8 14 L8 -8 L34 -8 L40 14" fill="none" stroke="#17212c" stroke-width="3"/>
+            <line x1="50" y1="-16" x2="50" y2="40" stroke="#17212c" stroke-width="4"/>
+            <line x1="50" y1="36" x2="76" y2="36" stroke="#17212c" stroke-width="4"/>
+            <rect x="54" y="12" width="22" height="22" fill="#b98a4a"/>
+            <circle cx="10" cy="42" r="8" fill="#17212c"/><circle cx="38" cy="42" r="8" fill="#17212c"/>
+          </g>
+          <text id="liftTxt" x="300" y="78" text-anchor="middle" font-size="15" font-weight="800" fill="#17212c">叉车 + 货物 最多10吨</text>
+          <!-- 치수선: 길이 -->
+          <line x1="40" y1="270" x2="558" y2="270" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+          <line x1="40" y1="244" x2="40" y2="278" stroke="#17212c"/><line x1="558" y1="240" x2="558" y2="278" stroke="#17212c"/>
+          <rect x="246" y="258" width="106" height="24" fill="#f8fafc"/>
+          <text x="299" y="276" text-anchor="middle" font-size="16" font-weight="800" fill="#17212c">长11.3米</text>
+          <!-- 치수선: 높이 -->
+          <line x1="584" y1="154" x2="584" y2="232" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+          <text x="594" y="190" font-size="15" font-weight="800" fill="#17212c">高度</text>
+          <text id="svgH" x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.8m</text>
+        </svg>
+        <p class="cap">长11.3米 = 尾板0.8 + 坡面7.1 + 平台3 + 搭板0.4米（10吨）。高度用手动液压泵调节。</p>
+      </div>
+      <div class="info">
+        <p class="model" id="iModel">标准型与两节折叠型规格相同</p>
+        <p class="big"><span id="iTon">10</span><small>吨</small></p>
+        <p class="fit" id="iFit">适合3吨叉车作业</p>
+        <p class="why" id="iWhy">例：叉车4.3吨 + 货物3吨 = 7.3吨。留有余量的规格。</p>
+        <ul class="spec">
+          <li><span>额定载重</span><b id="iCap">10吨</b></li>
+          <li><span>液压调节范围</span><b id="iH">1.1 ~ 1.8m</b></li>
+          <li><span>主梁</span><b id="iFrame">160×80×4 + 120×60×4矩管 5根</b></li>
+          <li><span>长 × 宽</span><b>11.3m × 2.2m</b></li>
+          <li><span>两节折叠型折叠长度</span><b>5.75m</b></li>
+          <li><span>升降方式</span><b>手动液压泵（无需电源）</b></li>
+        </ul>
+        <a class="btn btn-b" href="#ask" id="iAsk">咨询10吨报价</a>
+      </div>
+    </div>
+
+    <div class="calc">
+      <div>
+        <h3>吨位计算</h3>
+        <p>请输入叉车参数表上的自重。</p>
+      </div>
+      <form id="calc" onsubmit="return false">
+        <label>叉车自重（吨）<input type="number" id="cF" min="0" step="0.1" value="4.3" inputmode="decimal"></label>
+        <label>单次载货（吨）<input type="number" id="cL" min="0" step="0.1" value="3" inputmode="decimal"></label>
+        <output id="cOut" for="cF cL">合计7.3吨 → 建议选10吨</output>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="basic">
+  <div class="wrap">
+    <h2>用液压升起，再把车倒过来即可</h2>
+    <p class="lead">对接集装箱或货车的步骤。两节折叠型展开后用法相同。</p>
+    <div class="split rev">
+      <img src="../assets/img/p-use.jpg" alt="叉车经登车桥驶入集装箱" loading="lazy">
+      <ol class="steps tight">
+        <li><div><b>把尾板放到地面</b></div></li>
+        <li><div><b>关闭液压泵阀门</b></div></li>
+        <li><div><b>摇动手柄，升到略高于车厢底板</b></div></li>
+        <li><div><b>把车倒到搭板下方，拉上手刹</b></div></li>
+        <li><div><b>松开阀门让搭板搭在车厢底板上，用链条固定</b></div></li>
+        <li><div><b>在车轮后放好阻车器</b></div></li>
+        <li><div><b>完全释放油缸压力</b></div></li>
+        <li><div><b>放下支腿支撑登车桥</b></div></li>
+      </ol>
+    </div>
+    <p class="note">实际使用时请按照产品上的操作说明贴纸和说明书操作。</p>
+  </div>
+</section>
+
+<section class="sec gray" id="split">
+  <div class="wrap">
+    <h2>折叠运输，现场展开</h2>
+    <p class="lead">两节折叠型登车桥运来时坡面段叠放在支撑段上：折叠长5.75米，展开长11.3米。用叉车吊起坡面段，挂到支撑段末端的挂钩上即可。</p>
+    <div class="split">
+      <img src="../assets/img/p-fold-main.jpg" alt="坡面段折叠在上方的两节折叠型登车桥" loading="lazy">
+      <ol class="steps">
+        <li><div><b>把折叠状态的登车桥放到使用位置</b><span>下面是带车轮和支腿的支撑段。</span></div></li>
+        <li><div><b>用叉车吊起叠在上面的坡面段</b><span>把货叉插入坡面段的叉孔后吊起。</span></div></li>
+        <li><div><b>挂到支撑段末端的挂钩上放下</b><span>两段连接后全长11.3米。</span></div></li>
+        <li><div><b>用液压调好高度即可使用</b><span>用手动液压泵调到车厢底板高度。</span></div></li>
+      </ol>
+    </div>
+    <div class="strip">
+      <figure><img src="../assets/img/p-fold-1.jpg" alt="折叠状态的两节折叠型登车桥正面" loading="lazy"><figcaption>折叠状态，正面</figcaption></figure>
+      <figure><img src="../assets/img/p-fold-2.jpg" alt="折叠状态的两节折叠型登车桥侧面" loading="lazy"><figcaption>折叠状态，侧面</figcaption></figure>
+      <figure><img src="../assets/img/p-fold-3.jpg" alt="展开的两节折叠型登车桥" loading="lazy"><figcaption>展开状态</figcaption></figure>
+      <figure><img src="../assets/img/p-fold-4.jpg" alt="从尾板端看展开的两节折叠型登车桥" loading="lazy"><figcaption>展开状态，尾板端</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="table">
+  <div class="wrap">
+    <h2>规格与图纸</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>吨位</th><th>主梁</th><th>台面钢板</th><th>液压调节范围</th><th>轮胎（实心）</th><th>支腿</th><th>长 × 宽</th></tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+    <p class="note">吨位越大，主梁和台面钢板越厚。所有台面都铺8mm菱形钢板网，所有型号均为手动液压泵升降。也可定制20吨。</p>
+
+    <h3 class="sub">10吨详细参数</h3>
+    <dl class="specs">
+      <div><dt>额定载重</dt><dd>10,000kg</dd></div>
+      <div><dt>液压调节范围</dt><dd>1,100 ~ 1,800mm</dd></div>
+      <div><dt>外形尺寸</dt><dd>长11,300 × 宽2,200mm</dd></div>
+      <div><dt>长度构成</dt><dd>尾板800 + 坡面7,100 + 平台3,000 + 搭板400</dd></div>
+      <div><dt>两节折叠型折叠后尺寸</dt><dd>5,750 × 2,200 × 2,060mm</dd></div>
+      <div><dt>主梁</dt><dd>160×80×4 + 120×60×4mm矩管 5根</dd></div>
+      <div><dt>横撑间距</dt><dd>约40厘米</dd></div>
+      <div><dt>副梁</dt><dd>100×50×4mm矩管</dd></div>
+      <div><dt>台面</dt><dd>4mm钢板 + 8mm菱形钢板网</dd></div>
+      <div><dt>两侧护栏</dt><dd>高200mm（40×80×3mm矩管）</dd></div>
+      <div><dt>升降方式</dt><dd>登车桥专用一体手压泵</dd></div>
+      <div><dt>液压油缸</dt><dd>直径80mm × 2个</dd></div>
+      <div><dt>液压油管</dt><dd>32MPa高压油管</dd></div>
+      <div><dt>轮胎</dt><dd>600-9实心轮胎 2个<small>600-9表示轮胎宽约6英寸（15厘米）、轮辋直径9英寸，外径约54厘米。采用叉车用实心橡胶轮胎，不会爆胎，也不需要充气。</small></dd></div>
+      <div><dt>支腿</dt><dd>2个手摇支腿，行程400mm</dd></div>
+      <div><dt>与集装箱固定</dt><dd>桥身焊接挂钩 + 钢链</dd></div>
+      <div><dt>漆面</dt><dd>抛丸除锈 + 静电喷涂烤漆</dd></div>
+      <div><dt>颜色</dt><dd>蓝色（下单时可选其他颜色）</dd></div>
+      <div><dt>随货附件</dt><dd>阻车器、挂车链条、叉车牵引杆</dd></div>
+    </dl>
+
+    <h3 class="sub">图纸</h3>
+    <figure class="dwg">
+      <div class="scroll">
+        <svg viewBox="0 0 1040 566" role="img" aria-label="移动式登车桥10吨图纸。俯视图：尾板800、坡面7,100、平台3,000、搭板400，全长11,300，宽2,200。侧视图：车轮、支腿，高度1,100至1,800">
+          <defs>
+            <marker id="da" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#17212c"/></marker>
+            <pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" stroke="#c9d8ec" stroke-width="1"/></pattern>
+          </defs>
+          <g font-weight="700" fill="#17212c">
+            <!-- 위에서 본 모습 -->
+            <text x="50" y="34" font-size="15" font-weight="800">俯视图</text>
+            <rect x="50" y="62" width="63.7" height="82" fill="#dce7f5" stroke="#17212c" stroke-width="1.5"/>
+            <rect x="50" y="151" width="63.7" height="82" fill="#dce7f5" stroke="#17212c" stroke-width="1.5"/>
+            <rect x="113.7" y="60" width="804.4" height="175.2" fill="#f2f6fb" stroke="#17212c" stroke-width="2"/>
+            <rect x="113.7" y="60" width="804.4" height="175.2" fill="url(#mesh)"/>
+            <line x1="679.2" y1="60" x2="679.2" y2="235.2" stroke="#5b6b7b" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <g stroke-width="6"><line x1="113.7" y1="60" x2="918.1" y2="60" stroke="#f6b900"/><line x1="113.7" y1="60" x2="918.1" y2="60" stroke="#17212c" stroke-dasharray="9 9"/><line x1="113.7" y1="235.2" x2="918.1" y2="235.2" stroke="#f6b900"/><line x1="113.7" y1="235.2" x2="918.1" y2="235.2" stroke="#17212c" stroke-dasharray="9 9"/></g>
+            <rect x="918.1" y="72" width="31.9" height="151.2" fill="#c9d8ec" stroke="#17212c" stroke-width="1.5"/>
+            <g font-size="16" text-anchor="middle" paint-order="stroke" stroke="#f2f6fb" stroke-width="6" stroke-linejoin="round">
+              <text x="396.5" y="153">坡面</text>
+              <text x="798.7" y="153">平台</text>
+            </g>
+            <g font-size="13" text-anchor="middle" fill="#5b6b7b">
+              <text x="81.9" y="50">尾板</text>
+              <text x="934" y="50">搭板</text>
+            </g>
+            <!-- 폭 치수 -->
+            <line x1="30" y1="62" x2="30" y2="233" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <text x="22" y="147.6" font-size="14" text-anchor="middle" transform="rotate(-90 22 147.6)">宽2,200</text>
+            <!-- 길이 치수 -->
+            <line x1="50" y1="264" x2="950" y2="264" stroke="#17212c" stroke-width="1.2"/>
+            <g stroke="#17212c" stroke-width="1.2"><line x1="50" y1="256" x2="50" y2="272"/><line x1="113.7" y1="256" x2="113.7" y2="272"/><line x1="679.2" y1="256" x2="679.2" y2="272"/><line x1="918.1" y1="256" x2="918.1" y2="272"/><line x1="950" y1="256" x2="950" y2="272"/></g>
+            <g font-size="14" text-anchor="middle">
+              <text x="81.9" y="258">800</text>
+              <text x="396.5" y="258">7,100</text>
+              <text x="798.7" y="258">3,000</text>
+              <text x="934" y="258">400</text>
+            </g>
+            <line x1="52" y1="294" x2="948" y2="294" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <rect x="430" y="282" width="140" height="24" fill="#fff"/>
+            <text x="500" y="299" font-size="15" font-weight="800" text-anchor="middle">全长11,300</text>
+
+            <!-- 옆에서 본 모습 -->
+            <text x="50" y="344" font-size="15" font-weight="800">侧视图</text>
+            <line x1="20" y1="528" x2="1030" y2="528" stroke="#17212c" stroke-width="2"/>
+            <rect x="952" y="414" width="62" height="58" fill="none" stroke="#5b6b7b" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <text x="983" y="447" font-size="12" text-anchor="middle" fill="#5b6b7b">车厢底板</text>
+            <path d="M300 496 L679.2 420 L918.1 420 L918.1 452 L679.2 456 Z" fill="#0c3f8a"/>
+            <path d="M50 528 L113.7 523 L679.2 408.5 L918.1 408.5 L950 412.5 L950 416.5 L918.1 420 L679.2 420 L118 532 L50 532 Z" fill="#1560c4"/>
+            <g stroke-width="4" fill="none"><path d="M118 509 L679.2 394.5 L916 394.5" stroke="#f6b900"/><path d="M118 509 L679.2 394.5 L916 394.5" stroke="#17212c" stroke-dasharray="8 8"/></g>
+            <line x1="560" y1="444" x2="560" y2="512" stroke="#0c3f8a" stroke-width="7"/>
+            <line x1="604" y1="438" x2="566" y2="504" stroke="#9aa7b5" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="560" cy="514" r="14" fill="#17212c"/><circle cx="560" cy="514" r="5" fill="#e8edf2"/>
+            <line x1="905" y1="452" x2="905" y2="522" stroke="#17212c" stroke-width="7"/>
+            <rect x="893" y="521" width="24" height="7" fill="#17212c"/>
+            <!-- 높이 치수 -->
+            <line x1="940" y1="526" x2="940" y2="419" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <text x="929" y="472" font-size="13" text-anchor="middle" transform="rotate(-90 929 472)">高1,100~1,800</text>
+            <g font-size="13" text-anchor="middle" fill="#5b6b7b">
+              <text x="82" y="550">尾板</text>
+              <text x="560" y="550">车轮（2个液压油缸）</text>
+              <text x="890" y="550">支腿</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>单位mm，以10吨为准。两节折叠型折叠后为5,750 × 2,200 × 2,060mm。高度可在1,100~1,800mm之间调节。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec gray" id="faq">
+  <div class="wrap">
+    <h2>常见问题</h2>
+    <div class="faq">
+      <details open><summary>没有电的堆场也能用吗？</summary><p>可以。用手摇液压泵升降，不需要电源。</p></details>
+      <details><summary>不知道该选几吨。</summary><p>把叉车自重加上单次载货重量，选比这个数值大、留有余量的吨位。可以用上面的计算器试算，或告诉我们叉车型号，我们帮您选。</p></details>
+      <details><summary>标准型和两节折叠型有什么区别？</summary><p>标准型是一体式，放下即可使用。两节折叠型的坡面段叠在支撑段上（折叠长5.75米），运输和存放更方便，现场用叉车展开使用。两者使用方法相同。</p></details>
+      <details><summary>可以定制长度或宽度吗？</summary><p>可以。告诉我们现场宽度、车型和叉车大小，我们按合适尺寸报价。</p></details>
+      <details><summary>怎么移动？</summary><p>带有车轮，用叉车拖动即可。装上随货的牵引杆挂到叉车上。无需固定安装。</p></details>
+      <details><summary>用的是什么轮胎？</summary><p>实心轮胎。整体实心橡胶，不会爆胎。6~10吨用600-9，12~15吨用700-9。</p></details>
+      <details><summary>可以改颜色吗？</summary><p>可以。标准为蓝色，下单时可按您想要的颜色喷涂。实际颜色在生产前用色板确认。</p></details>
+      <details><summary>两节折叠型折叠后有多大？</summary><p>折叠后长5.75米、宽2.2米、高2.06米（10吨）。展开后长11.3米。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec ask" id="ask">
+  <div class="wrap grid">
+    <div>
+      <h2>询价</h2>
+      <p class="lead">告诉我们吨位和使用地点，我们会告知价格和交货时间。不确定吨位也没关系。</p>
+      <div class="direct">
+        <a class="btn btn-y" id="telBtn" href="#ask">电话咨询</a>
+        <a class="btn btn-line" id="kakaoBtn" href="#ask">KakaoTalk咨询</a>
+      </div>
+    </div>
+    <form class="form" id="askForm">
+      <label>姓名或公司<input name="name" required autocomplete="organization"></label>
+      <label>联系电话<input name="tel" type="tel" required autocomplete="tel" placeholder="010-0000-0000"></label>
+      <label>类型<select name="type" id="fType"><option>标准型</option><option>两节折叠型</option><option selected>还不确定</option></select></label>
+      <label>吨位<select name="ton" id="fTon"><option>6吨</option><option>8吨</option><option selected>10吨</option><option>12吨</option><option>15吨</option><option>还不确定</option></select></label>
+      <label class="full">使用地区<input name="area" placeholder="例：京畿道南杨州"></label>
+      <label class="full">想咨询的内容<textarea name="msg" placeholder="叉车类型、装运货物、所需数量等"></textarea></label>
+      <div class="full"><button class="btn btn-b" type="submit">发送询价</button></div>
+      <div class="done" id="done" hidden role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b data-site="name">移动式登车桥</b></p>
+    <p id="bizInfo">公司名称、负责人、营业执照号、地址和电话将在确认后补充。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var D = {
+    6:  {w:"2,200kg", fit:"适合2吨叉车作业",        why:"例：叉车3.3吨 + 货物2吨 = 5.3吨。适合轻货场地。"},
+    8:  {w:"2,300kg", fit:"适合2.5吨叉车作业",      why:"例：叉车3.7吨 + 货物2.5吨 = 6.2吨。用于一般托盘作业。"},
+    10: {w:"2,400kg", fit:"适合3吨叉车作业",        why:"例：叉车4.3吨 + 货物3吨 = 7.3吨。留有余量的规格。"},
+    12: {w:"2,800kg", fit:"适合3.5吨叉车作业",      why:"例：叉车4.8吨 + 货物3.5吨 = 8.3吨。经常搬运重托盘时选择。"},
+    15: {w:"3,200kg", fit:"适合4.5~5吨叉车作业",    why:"例：叉车7吨 + 货物5吨 = 12吨。适合重型货物场地。"}
+  };
+  var order = [6,8,10,12,15];
+  // 톤수별 사양 (공장 사양서 기준, 폭은 모두 2.2m)
+  var S = {
+    6:  {frame:"160×80×4矩管 4根",            plate:"3mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2个"},
+    8:  {frame:"160×80×4 + 120×60×4矩管 5根", plate:"3mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2个"},
+    10: {frame:"160×80×4 + 120×60×4矩管 5根", plate:"4mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2个"},
+    12: {frame:"200×100×4矩管 5根",           plate:"5mm", h:"1.2 ~ 1.8m", tire:"700-9", leg:"2个 + 辅助2个"},
+    15: {frame:"200×100×5矩管 5根",           plate:"6mm", h:"1.2 ~ 1.8m", tire:"700-9", leg:"2个 + 辅助2个"}
+  };
+  var $ = function(id){ return document.getElementById(id); };
+
+  // 규격표
+  $("tb").innerHTML = order.map(function(t){
+    return '<tr data-ton="'+t+'"><td>'+t+'吨</td><td>'+S[t].frame+'</td><td>'+S[t].plate+'</td><td>'+S[t].h+'</td><td>'+S[t].tire+'</td><td>'+S[t].leg+'</td><td>11.3m × 2.2m</td></tr>';
+  }).join("");
+
+  function pick(t){
+    if(!D[t]) return;
+    document.querySelectorAll(".tons button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.ton == t ? "true" : "false"); });
+    $("iH").textContent = S[t].h;
+    $("iFrame").textContent = S[t].frame;
+    $("svgH").textContent = S[t].h.replace(/ /g, "");
+    $("iTon").textContent = t;
+    $("iFit").textContent = D[t].fit;
+    $("iWhy").textContent = D[t].why;
+    $("iCap").textContent = t + "吨";
+    $("iAsk").textContent = "咨询" + t + "吨报价";
+    $("liftTxt").textContent = "叉车 + 货物 最多" + t + "吨";
+    // 톤수가 커질수록 지게차 그림도 조금 커집니다
+    var s = 0.82 + order.indexOf(+t) * 0.09;
+    $("lift").setAttribute("transform", "translate(238 " + (116 - order.indexOf(+t) * 5) + ") rotate(-12) scale(" + s + ")");
+    document.querySelectorAll("#tb tr").forEach(function(r){ r.classList.toggle("on", r.dataset.ton == t); });
+    $("fTon").value = t + "吨";
+  }
+  document.querySelectorAll("[data-ton]").forEach(function(el){
+    if(el.tagName === "TR") return;
+    el.addEventListener("click", function(){ pick(el.dataset.ton); });
+  });
+
+  // 종류 단추를 누르면 문의 양식의 종류가 맞춰집니다
+  document.querySelectorAll("[data-type]").forEach(function(el){ el.addEventListener("click", function(){ $("fType").value = el.dataset.type; }); });
+
+  // 톤수 계산
+  function calc(){
+    var f = parseFloat($("cF").value) || 0, l = parseFloat($("cL").value) || 0, sum = Math.round((f + l) * 10) / 10;
+    if(!sum){ $("cOut").textContent = "请输入重量"; return; }
+    var rec = order.filter(function(t){ return t >= sum * 1.2; })[0];
+    $("cOut").textContent = rec ? "合计" + sum + "吨 → 建议选" + rec + "吨" : "合计" + sum + "吨 → 超过15吨，请单独咨询";
+  }
+  $("cF").addEventListener("input", calc); $("cL").addEventListener("input", calc);
+
+  // 상호·전화
+  document.querySelectorAll("[data-site=name]").forEach(function(e){ e.textContent = SITE.name; });
+  if(SITE.tel){ $("telBtn").href = "tel:" + SITE.tel.replace(/[^0-9+]/g, ""); $("telBtn").textContent = "电话 " + SITE.tel; }
+  if(SITE.kakao){ $("kakaoBtn").href = SITE.kakao; } else { $("kakaoBtn").hidden = true; }
+
+  // 문의
+  $("askForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = new FormData(e.target), text = "[移动式登车桥询价]\n姓名/公司: " + f.get("name") + "\n电话: " + f.get("tel") + "\n类型: " + f.get("type") + "\n吨位: " + f.get("ton") + "\n地区: " + (f.get("area") || "-") + "\n内容: " + (f.get("msg") || "-");
+    var box = $("done"); box.hidden = false;
+    if(SITE.endpoint){
+      var btn = e.target.querySelector("button[type=submit]"), data = new URLSearchParams();
+      Object.keys(SITE.fields).forEach(function(k){ data.append(SITE.fields[k], k === "ton" ? f.get("ton") + " / " + f.get("type") + " / 중국어 페이지" : (f.get(k) || "")); });
+      box.textContent = "正在发送…"; btn.disabled = true;
+      fetch(SITE.endpoint, {method:"POST", mode:"no-cors", body:data})
+        .then(function(){ box.textContent = "已发送，我们会尽快与您联系。"; e.target.reset(); pick(10); })
+        .catch(function(){ box.textContent = "发送失败，请检查网络后重试。\n\n" + text; })
+        .then(function(){ btn.disabled = false; });
+    } else {
+      box.textContent = "已整理询价内容，请通过电话或短信告诉我们。\n\n" + text;
+    }
+  });
+
+  // 주소 뒤에 ?ton=12 처럼 붙이면 그 톤수로 시작 / 제작 과정 촬영용 옵션
+  var q = new URLSearchParams(location.search);
+  if(q.get("stage") === "wire") document.documentElement.classList.add("wire");
+  if(q.get("stage") === "plain") document.getElementById("main").disabled = true;
+  if(q.get("shot")){ document.querySelectorAll("video").forEach(function(v){ var im = new Image(); im.src = v.poster; im.className = v.className + " hero-still"; im.style.cssText = v.closest(".hero") ? "" : "width:100%;height:100%;object-fit:cover;border-radius:inherit"; if(!v.closest(".hero")) im.className = ""; v.replaceWith(im); }); document.querySelectorAll("img[loading]").forEach(function(i){ i.loading = "eager"; }); }
+  pick(q.get("ton") || 10); calc();
+  function mark(){ var e = document.documentElement; e.dataset.h = e.scrollHeight; e.dataset.ty = Math.round($("tons").getBoundingClientRect().top + window.scrollY); }
+  mark(); window.addEventListener("load", mark);
+})();
+</script>
+</body>
+</html>
