@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이동식 도크 6톤~15톤 | 기본형·2단 분리형 컨테이너 상하차 경사로</title>
-<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 기본형과 2단 분리형, 6·8·10·12·15톤, 수동 유압으로 높이 1.1~1.7m 조절.">
+<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 기본형과 2단 분리형, 6·8·10·12·15톤, 수동 유압으로 높이 1.1~1.8m 조절, 폭 2.2m.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap">
@@ -149,6 +149,28 @@ button,input,select,textarea{font:inherit;color:inherit}
 .split.rev > :first-child{order:2;align-self:start}
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
 .strip img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.strip figure{margin:0}
+.strip figcaption{margin-top:6px;font-size:14px;font-weight:700;color:var(--steel)}
+.split > img{width:100%;border-radius:8px;aspect-ratio:16/9;object-fit:cover;background:#fff}
+
+/* 색상과 도장 */
+.colors{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+.colors figure{margin:0}
+.colors img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+.colors figcaption{margin-top:12px}
+.colors figcaption b{display:block;font-size:19px;font-weight:800}
+.colors figcaption span{display:block;margin-top:2px;font-size:15px;color:var(--steel)}
+.colors .ai b::after{content:"참고 이미지";margin-left:8px;padding:2px 8px;border-radius:4px;background:var(--yellow);font-size:13px;font-weight:800;vertical-align:2px}
+.coat{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;align-items:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.coat h3{font-size:24px;font-weight:800;letter-spacing:-.01em}
+.coat p{margin-top:10px;color:var(--steel);font-size:16px}
+.coat figure{margin:0}
+.coat img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.coat figcaption{margin-top:6px;font-size:14px;font-weight:700}
+.dwg svg{display:block;width:100%;min-width:760px;height:auto}
+@media (prefers-reduced-motion:no-preference){.hero .hero-still{animation:heroIn 22s ease-out both}}
+@keyframes heroIn{from{transform:scale(1.07)}to{transform:scale(1)}}
+@media (max-width:860px){.colors{grid-template-columns:1fr}.coat{grid-template-columns:1fr 1fr}.coat > div{grid-column:1/-1}}
 
 /* 특징 */
 .feat{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:44px}
@@ -260,7 +282,11 @@ footer b{color:#fff;font-size:16px}
 /* 제작 과정 촬영용: 뼈대만 보기 */
 .wire body,.wire .top,.wire .gray,.wire .ask,.wire footer,.wire .calc,.wire .hero,.wire .pick,.wire .draw,.wire thead th{background:#fff!important}
 .wire *{color:transparent!important;border-color:#c9d0d8!important;text-shadow:none!important}
-.wire img,.wire video,.wire svg{visibility:hidden}
+.wire svg{visibility:hidden}
+.wire img,.wire video{filter:brightness(0) invert(.88)}
+.wire .hyd,.wire .tablebox,.wire .dwg .scroll{background:#fff!important}
+.wire h3,.wire .lead-item p,.wire .lead-item li,.wire .hyd li,.wire .hyd li span,.wire .types p,.wire .types li,.wire dt,.wire dd,.wire figcaption b,.wire figcaption span,.wire figcaption{background:#cfd6de!important;border-radius:4px}
+.wire .hyd li::before{background:#b9c2cc!important}
 .wire .hero::after,.wire .stripe{display:none}
 .wire .hero,.wire .feat figure,.wire .split video,.wire .strip img,.wire .draw{background:#e4e8ed!important;visibility:visible}
 .wire h1,.wire h2,.wire h3,.wire .lead,.wire .hero p,.wire .steps b,.wire .steps span,.wire .faq summary,.wire .info .big,.wire .info .fit,.wire .info .why,.wire .spec b,.wire .spec span,.wire td,.wire th,.wire .nav a,.wire .brand,.wire label,.wire .note,.wire .calc p,.wire footer p{background:#cfd6de!important;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
@@ -278,9 +304,10 @@ footer b{color:#fff;font-size:16px}
       <a href="#types">종류</a>
       <a href="#hyd">수동 유압</a>
       <a href="#feature">특징</a>
+      <a href="#color">색상</a>
       <a href="#tons">톤수</a>
-      <a href="#basic">기본형 영상</a>
-      <a href="#split">2단 분리형 영상</a>
+      <a href="#basic">쓰는 순서</a>
+      <a href="#split">2단 분리형</a>
       <a href="#table">규격·도면</a>
       <a href="#faq">질문</a>
     </nav>
@@ -290,15 +317,13 @@ footer b{color:#fff;font-size:16px}
 
 <main id="top">
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/img/hero.jpg">
-    <source src="assets/video/hero-loop.mp4" type="video/mp4">
-  </video>
+  <img class="hero-still" src="assets/img/p-hero.jpg" alt="지게차가 이동식 도크를 타고 컨테이너 안으로 올라가는 모습" fetchpriority="high">
   <div class="wrap">
     <h1>지게차가 컨테이너 안까지 그대로 올라갑니다</h1>
-    <p>도크가 없는 창고와 야적장에서 쓰는 이동식 도크입니다. 기본형과 2단 분리형, 6톤부터 15톤까지 있고, 수동 유압으로 차 바닥 높이(1.1~1.7m)에 맞춥니다.</p>
+    <p>도크가 없는 창고와 야적장에서 쓰는 이동식 도크입니다. 기본형과 2단 분리형, 6톤부터 15톤까지 있고, 수동 유압으로 차 바닥 높이(1.1~1.8m)에 맞춥니다. 폭은 모두 2.2m입니다.</p>
     <div class="acts">
       <a class="btn btn-y" href="#tons">톤수 고르기</a>
-      <a class="btn btn-line" href="#split">2단 분리형 영상 보기</a>
+      <a class="btn btn-line" href="#split">2단 분리형 보기</a>
     </div>
   </div>
   <div class="pick">
@@ -320,7 +345,7 @@ footer b{color:#fff;font-size:16px}
     <p class="lead">쓰는 방법은 같습니다. 받아서 놓는 방식과 보관이 다릅니다.</p>
     <div class="types">
       <figure>
-        <img src="assets/img/basic.jpg" alt="한 몸으로 된 기본형 이동식 도크" loading="lazy">
+        <img src="assets/img/p-basic.jpg" alt="컨테이너에 걸쳐 놓은 기본형 이동식 도크" loading="lazy">
         <figcaption>
           <h3>기본형</h3>
           <p>경사와 받침이 한 몸으로 된 일체형입니다. 내려놓고 유압으로 높이만 맞추면 바로 씁니다.</p>
@@ -328,19 +353,19 @@ footer b{color:#fff;font-size:16px}
             <li>조립 없이 바로 사용</li>
             <li>한곳에 두고 계속 쓰는 현장에</li>
           </ul>
-          <div class="acts"><a class="btn btn-b" href="#ask" data-type="기본형">기본형 견적 문의</a><a class="btn btn-o" href="#basic">사용 영상 보기</a></div>
+          <div class="acts"><a class="btn btn-b" href="#ask" data-type="기본형">기본형 견적 문의</a><a class="btn btn-o" href="#basic">쓰는 순서 보기</a></div>
         </figcaption>
       </figure>
       <figure class="two">
-        <img src="assets/img/split2.jpg" alt="두 토막을 포개 놓은 2단 분리형 이동식 도크" loading="lazy">
+        <img src="assets/img/p-split.jpg" alt="경사 부분을 받침 부분 위에 포개 놓은 2단 분리형 이동식 도크" loading="lazy">
         <figcaption>
           <h3>2단 분리형</h3>
-          <p>경사 부분과 받침 부분이 나뉘어 옵니다. 현장에서 지게차로 맞붙여 씁니다.</p>
+          <p>경사 부분이 받침 부분 위에 포개진 채로 옵니다. 현장에서 지게차로 들어 이어 붙여 씁니다.</p>
           <ul>
-            <li>두 토막으로 나눠 운반·보관</li>
-            <li>지게차 한 대로 현장 조립</li>
+            <li>접으면 길이 5.75m라 운반과 보관이 쉬움</li>
+            <li>지게차 한 대로 현장에서 펼침</li>
           </ul>
-          <div class="acts"><a class="btn btn-b" href="#ask" data-type="2단 분리형">2단 분리형 견적 문의</a><a class="btn btn-o" href="#split">조립 영상 보기</a></div>
+          <div class="acts"><a class="btn btn-b" href="#ask" data-type="2단 분리형">2단 분리형 견적 문의</a><a class="btn btn-o" href="#split">펼치는 순서 보기</a></div>
         </figcaption>
       </figure>
     </div>
@@ -355,14 +380,14 @@ footer b{color:#fff;font-size:16px}
       <ul>
         <li>전기가 필요 없는 수동 유압 펌프<span>전기가 없는 야적장에서도 그대로 씁니다.</span></li>
         <li>지름 80mm 유압 실린더 2개<span>손잡이를 저으면 실린더가 바퀴 축을 밀어 도크가 올라갑니다.</span></li>
-        <li>차 바닥 높이 1.1~1.7m에 맞춥니다<span>밸브를 풀면 내려옵니다. 컨테이너, 탑차, 화물차 높이에 맞게.</span></li>
-        <li>고압용 이중 철망 유압 호스<span>유압유는 46번 내마모 유압유를 씁니다.</span></li>
+        <li>차 바닥 높이 1.1~1.8m에 맞춥니다<span>밸브를 풀면 내려옵니다. 12·15톤은 1.2~1.8m입니다.</span></li>
+        <li>32MPa 고압 유압 호스<span>도크 전용 일체형 펌프와 실린더를 고압 호스로 잇습니다.</span></li>
       </ul>
     </div>
     <div class="shots">
-      <figure><img src="assets/img/hyd-handle.jpg" alt="도크 옆면에 꽂아 둔 유압 펌프 손잡이와 사용 설명 스티커" loading="lazy"><figcaption>옆면에 꽂아 두는 유압 펌프 손잡이</figcaption></figure>
-      <figure><img src="assets/img/hyd-pump.jpg" alt="도크 옆에 달린 수동 유압 펌프" loading="lazy"><figcaption>수동 유압 펌프</figcaption></figure>
-      <figure><img src="assets/img/hyd-cyl.jpg" alt="바퀴 축을 미는 유압 실린더 두 개" loading="lazy"><figcaption>유압 실린더 2개</figcaption></figure>
+      <figure><img src="assets/img/p-cyl.jpg" alt="출고 전 포장해 둔 유압 실린더와 사용 설명 스티커" loading="lazy"><figcaption>유압 실린더 (출고 전 포장 상태)</figcaption></figure>
+      <figure><img src="assets/img/p-pump.jpg" alt="도크 옆에 달린 수동 유압 펌프" loading="lazy"><figcaption>도크 전용 수동 유압 펌프</figcaption></figure>
+      <figure><img src="assets/img/p-handle.jpg" alt="도크 옆면에 끼워 두는 유압 펌프 손잡이" loading="lazy"><figcaption>옆면에 끼워 두는 펌프 손잡이</figcaption></figure>
     </div>
   </div>
 </section>
@@ -371,47 +396,80 @@ footer b{color:#fff;font-size:16px}
   <div class="wrap">
     <h2>가장 먼저 보셔야 할 세 가지</h2>
     <div class="lead-item">
-      <video muted loop playsinline autoplay poster="assets/img/detail-poster.jpg"><source src="assets/video/detail.mp4" type="video/mp4"></video>
+      <img src="assets/img/p-frame.jpg" alt="칠하기 전, 녹을 벗긴 강철 뼈대" loading="lazy">
       <div>
         <h3>두꺼운 강철 뼈대</h3>
-        <p>160×80mm 각관 다섯 줄이 길이 방향으로 지나가고, 100×50mm 각관이 가로로 받칩니다.</p>
+        <p>칠하기 전 뼈대입니다. 길이 방향으로 주 뼈대 5줄이 지나가고, 가로대를 약 40cm 간격으로 촘촘히 넣었습니다.</p>
         <ul>
-          <li>주 뼈대 160×80mm 각관 5줄 (10톤 기준)</li>
-          <li>가로대 100×50mm 각관</li>
-          <li>바닥 4mm 철판 + 미끄럼 방지 망</li>
+          <li>주 뼈대 160×80×4mm + 120×60×4mm 각관 5줄 (10톤)</li>
+          <li>보조 뼈대 100×50×4mm 각관</li>
+          <li>바닥 4mm 철판 + 8mm 다이아몬드 망</li>
         </ul>
       </div>
     </div>
     <div class="lead-item rev">
-      <img src="assets/img/lead-hyd.jpg" alt="손잡이를 저어 유압으로 도크 높이를 올리는 모습" loading="lazy">
+      <img src="assets/img/p-container.jpg" alt="컨테이너 바닥 높이에 맞춰 걸쳐 놓은 이동식 도크" loading="lazy">
       <div>
         <h3>전기 없이 유압으로 높이 조절</h3>
         <p>수동 유압 펌프의 손잡이를 저으면 도크가 올라갑니다. 전기도 배터리도 필요 없어서 야적장 어디서나 씁니다.</p>
         <ul>
-          <li>수동 유압 펌프로 1.1 ~ 1.7m</li>
+          <li>수동 유압 펌프로 1.1 ~ 1.8m</li>
           <li>한 사람이 손으로 올리고 내림</li>
           <li>컨테이너, 탑차, 화물차 높이에 모두 맞춤</li>
         </ul>
       </div>
     </div>
     <div class="lead-item">
-      <img src="assets/img/wheel.jpg" alt="유압 실린더 두 개와 이어진 솔리드 타이어 바퀴" loading="lazy">
+      <img src="assets/img/p-tire.jpg" alt="출고 전 솔리드 타이어 바퀴와 바퀴 축 틀" loading="lazy">
       <div>
-        <h3>유압으로 움직이는 솔리드 타이어 바퀴</h3>
-        <p>유압 실린더 두 개가 바퀴 축을 밀어 도크를 올립니다. 옮길 때도 이 바퀴로 끌어 옮깁니다.</p>
+        <h3>펑크 없는 솔리드 타이어 바퀴</h3>
+        <p>속이 꽉 찬 고무 타이어라 펑크가 나지 않습니다. 유압 실린더 두 개가 이 바퀴 축을 밀어 도크를 올리고, 옮길 때도 이 바퀴로 끌어 옮깁니다.</p>
         <ul>
+          <li>6~10톤 600-9, 12·15톤 700-9 솔리드 타이어</li>
           <li>유압 실린더 지름 80mm × 2개</li>
-          <li>펑크가 나지 않는 솔리드 타이어</li>
-          <li>바퀴 뒤에 받치는 고임목</li>
+          <li>바퀴 고임목 기본 포함</li>
         </ul>
       </div>
     </div>
-    <h3 class="sub">그 밖에 따져 볼 네 가지</h3>
-    <div class="feat four">
-      <figure><img src="assets/img/tail.jpg" alt="틈이 없는 일체형 꼬리판" loading="lazy"><figcaption><b>틈 없는 일체형 꼬리판</b><span>지게차 바퀴가 틈새에 빠지지 않게 한 장으로 만들었습니다.</span></figcaption></figure>
-      <figure><img src="assets/img/part-grid.jpg" alt="미끄럼 방지 망을 덧댄 바닥" loading="lazy"><figcaption><b>미끄럽지 않은 바닥</b><span>4mm 철판 위에 다이아몬드 무늬 미끄럼 방지 망.</span></figcaption></figure>
-      <figure><img src="assets/img/part-leg.jpg" alt="손으로 돌려 맞추는 받침 다리" loading="lazy"><figcaption><b>손으로 돌리는 받침 다리</b><span>기계식 받침 다리 한 벌. 높이를 맞춘 뒤 세워 둡니다.</span></figcaption></figure>
-      <figure><img src="assets/img/part-lip.jpg" alt="차 바닥에 걸친 걸침판" loading="lazy"><figcaption><b>걸침판과 안전 체인</b><span>16mm 철판 걸침판을 걸치고, 체인으로 차와 묶습니다.</span></figcaption></figure>
+    <h3 class="sub">그 밖에 따져 볼 여섯 가지</h3>
+    <div class="feat six">
+      <figure><img src="assets/img/p-tail.jpg" alt="땅에 닿는 쪽 꼬리판" loading="lazy"><figcaption><b>꼬리판 800mm</b><span>땅에 닿는 쪽 발판. 지게차가 바닥에서 부드럽게 올라섭니다.</span></figcaption></figure>
+      <figure><img src="assets/img/p-mesh.jpg" alt="다이아몬드 무늬 미끄럼 방지 망을 덮은 바닥" loading="lazy"><figcaption><b>미끄럽지 않은 바닥</b><span>4mm 철판 위에 8mm 다이아몬드 망을 덮었습니다.</span></figcaption></figure>
+      <figure><img src="assets/img/p-lip.jpg" alt="차 바닥에 걸치는 걸침판과 체인" loading="lazy"><figcaption><b>걸침판과 체인</b><span>걸침판을 차 바닥에 걸치고, 몸체에 용접한 고리에 체인을 걸어 묶습니다.</span></figcaption></figure>
+      <figure><img src="assets/img/p-leg.jpg" alt="손잡이를 돌려 높이를 맞추는 받침 다리" loading="lazy"><figcaption><b>손으로 돌리는 받침 다리</b><span>다리 2개가 400mm까지 늘어납니다. 12·15톤은 보조 다리 2개가 더 붙습니다.</span></figcaption></figure>
+      <figure><img src="assets/img/p-chock.jpg" alt="솔리드 타이어 앞에 놓은 바퀴 고임목" loading="lazy"><figcaption><b>바퀴 고임목</b><span>쓰는 동안 도크가 밀리지 않게 바퀴를 받칩니다.</span></figcaption></figure>
+      <figure><img src="assets/img/p-towbar.jpg" alt="지게차에 거는 견인봉 연결부" loading="lazy"><figcaption><b>지게차 견인봉</b><span>견인봉을 끼워 지게차로 끌어 옮깁니다.</span></figcaption></figure>
+    </div>
+
+    <div class="lead-item rev">
+      <img src="assets/img/p-parts.jpg" alt="출고 전에 펼쳐 놓은 고임목, 유압 호스, 실린더, 견인봉과 체인" loading="lazy">
+      <div>
+        <h3>같이 오는 부속</h3>
+        <p>고임목, 체인, 견인봉이 도크와 함께 옵니다. 사진은 출고 전에 부속을 펼쳐 놓은 모습입니다.</p>
+        <ul>
+          <li>바퀴 고임목</li>
+          <li>차에 거는 체인</li>
+          <li>지게차 견인봉</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="color">
+      <h3 class="sub">색상은 주문할 때 바꿀 수 있습니다</h3>
+      <p class="lead">기본은 파랑입니다. 원하는 색을 알려 주시면 그 색으로 칠해서 만듭니다.</p>
+      <div class="colors">
+        <figure><img src="assets/img/p-color-blue.jpg" alt="파란색 기본 도장의 2단 분리형 도크" loading="lazy"><figcaption><b>기본 색 파랑</b><span>실제 제품 사진입니다.</span></figcaption></figure>
+        <figure class="ai"><img src="assets/img/p-color-pink.jpg" alt="같은 도크를 핑크색으로 칠해 본 참고 이미지" loading="lazy"><figcaption><b>다른 색으로 주문한 예</b><span>같은 사진을 AI로 칠해 본 참고 이미지입니다. 실제 색은 주문 전에 색 견본으로 확인해 드립니다.</span></figcaption></figure>
+      </div>
+      <div class="coat">
+        <div>
+          <h3>녹을 벗기고 구워서 칠합니다</h3>
+          <p>쇼트 블라스트로 녹을 벗긴 뒤 정전 분체 도장을 하고 구워서 마감합니다. 공장에서 잰 도막 두께는 120~141µm입니다.</p>
+        </div>
+        <figure><img src="assets/img/p-coat-1.jpg" alt="도막 두께 측정기로 옆면의 칠 두께를 재는 모습" loading="lazy"><figcaption>옆면 도막 측정</figcaption></figure>
+        <figure><img src="assets/img/p-coat-2.jpg" alt="도막 두께 측정기로 기둥의 칠 두께를 재는 모습" loading="lazy"><figcaption>기둥 도막 측정</figcaption></figure>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -465,24 +523,25 @@ footer b{color:#fff;font-size:16px}
           <line x1="40" y1="270" x2="558" y2="270" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
           <line x1="40" y1="244" x2="40" y2="278" stroke="#17212c"/><line x1="558" y1="240" x2="558" y2="278" stroke="#17212c"/>
           <rect x="246" y="258" width="106" height="24" fill="#f8fafc"/>
-          <text x="299" y="276" text-anchor="middle" font-size="16" font-weight="800" fill="#17212c">길이 11.15m</text>
+          <text x="299" y="276" text-anchor="middle" font-size="16" font-weight="800" fill="#17212c">길이 11.3m</text>
           <!-- 치수선: 높이 -->
           <line x1="584" y1="154" x2="584" y2="232" stroke="#17212c" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
           <text x="594" y="190" font-size="15" font-weight="800" fill="#17212c">높이</text>
-          <text x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.7m</text>
+          <text id="svgH" x="594" y="210" font-size="15" font-weight="800" fill="#17212c">1.1~1.8m</text>
         </svg>
-        <p class="cap">길이 11.15m = 꼬리판 0.75 + 경사 7 + 수평 3 + 걸침판 0.4m. 높이는 수동 유압 펌프로 맞춥니다.</p>
+        <p class="cap">길이 11.3m = 꼬리판 0.8 + 경사 7.1 + 수평 3 + 걸침판 0.4m (10톤 기준). 높이는 수동 유압 펌프로 맞춥니다.</p>
       </div>
       <div class="info">
-        <p class="model" id="iModel">DCQY-10T</p>
+        <p class="model" id="iModel">기본형과 2단 분리형 같은 규격</p>
         <p class="big"><span id="iTon">10</span><small>톤</small></p>
         <p class="fit" id="iFit">3톤 지게차 작업에 맞습니다</p>
         <p class="why" id="iWhy">예: 지게차 4.3톤 + 짐 3톤 = 7.3톤. 여유를 두고 고르는 규격입니다.</p>
         <ul class="spec">
           <li><span>올릴 수 있는 무게</span><b id="iCap">10톤</b></li>
-          <li><span>유압 높이 조절</span><b>1.1 ~ 1.7m</b></li>
-          <li><span>전체 길이</span><b>11.15m</b></li>
-          <li><span>폭 (바깥 / 바닥)</span><b>2.2m / 2.1m</b></li>
+          <li><span>유압 높이 조절</span><b id="iH">1.1 ~ 1.8m</b></li>
+          <li><span>주 뼈대</span><b id="iFrame">160×80×4 + 120×60×4 각관 5줄</b></li>
+          <li><span>길이 × 폭</span><b>11.3m × 2.2m</b></li>
+          <li><span>2단 분리형 접은 길이</span><b>5.75m</b></li>
           <li><span>올리는 방식</span><b>수동 유압 펌프 (전기 필요 없음)</b></li>
         </ul>
         <a class="btn btn-b" href="#ask" id="iAsk">10톤 견적 문의하기</a>
@@ -506,20 +565,18 @@ footer b{color:#fff;font-size:16px}
 <section class="sec" id="basic">
   <div class="wrap">
     <h2>기본형은 유압으로 올려 두고, 차를 대면 됩니다</h2>
-    <p class="lead">제품 옆면에 붙어 있는 사용 설명 순서 그대로입니다. 2단 분리형도 맞붙인 뒤에는 똑같이 씁니다.</p>
+    <p class="lead">컨테이너나 화물차에 대는 순서입니다. 2단 분리형도 펼친 뒤에는 똑같이 씁니다.</p>
     <div class="split rev">
-      <video controls muted playsinline preload="metadata" poster="assets/img/basic-poster.jpg">
-        <source src="assets/video/basic-type.mp4" type="video/mp4">
-      </video>
+      <img src="assets/img/p-use.jpg" alt="지게차가 이동식 도크를 타고 컨테이너 안으로 들어가는 모습" loading="lazy">
       <ol class="steps tight">
         <li><div><b>꼬리판을 바닥에 내립니다</b></div></li>
-        <li><div><b>유압 펌프 밸브를 시계 방향으로 잠급니다</b></div></li>
+        <li><div><b>유압 펌프 밸브를 잠급니다</b></div></li>
         <li><div><b>손잡이를 저어 차 바닥보다 조금 높게 올립니다</b></div></li>
         <li><div><b>차를 걸침판 아래로 대고 주차 브레이크를 겁니다</b></div></li>
         <li><div><b>밸브를 풀어 걸침판을 차 바닥에 걸치고 체인으로 묶습니다</b></div></li>
         <li><div><b>바퀴 뒤에 고임목을 놓습니다</b></div></li>
         <li><div><b>유압 실린더의 압력을 완전히 뺍니다</b></div></li>
-        <li><div><b>받침 다리를 세워 바닥에서 10cm쯤 띄워 둡니다</b></div></li>
+        <li><div><b>받침 다리를 내려 도크를 받쳐 둡니다</b></div></li>
       </ol>
     </div>
     <p class="note">실제로 쓰실 때는 제품에 붙은 사용 설명과 설명서를 따라 주세요.</p>
@@ -528,24 +585,22 @@ footer b{color:#fff;font-size:16px}
 
 <section class="sec gray" id="split">
   <div class="wrap">
-    <h2>두 토막으로 나눠 옮기고, 현장에서 맞붙입니다</h2>
-    <p class="lead">2단 분리형은 경사 부분과 받침 부분이 따로 옵니다. 지게차 한 대로 들어서 끼우면 끝납니다. 아래는 실제 조립 영상입니다.</p>
+    <h2>접어서 옮기고, 현장에서 펼칩니다</h2>
+    <p class="lead">2단 분리형은 경사 부분이 받침 부분 위에 포개진 채로 옵니다. 접은 길이는 5.75m, 펼치면 11.3m입니다. 지게차로 경사 부분을 들어 받침 부분 끝 고리에 걸면 끝납니다.</p>
     <div class="split">
-      <video controls muted playsinline preload="metadata" poster="assets/img/video-poster.jpg">
-        <source src="assets/video/split-type.mp4" type="video/mp4">
-      </video>
+      <img src="assets/img/p-fold-main.jpg" alt="경사 부분을 받침 부분 위에 포개 접어 둔 2단 분리형 도크" loading="lazy">
       <ol class="steps">
-        <li><div><b>받침 부분을 세웁니다</b><span>바퀴와 다리가 달린 쪽을 놓을 자리에 둡니다.</span></div></li>
-        <li><div><b>경사 부분을 지게차로 듭니다</b><span>포크로 떠서 받침 쪽으로 가져갑니다.</span></div></li>
-        <li><div><b>연결부에 끼워 내립니다</b><span>두 토막이 맞물리면 핀으로 고정합니다.</span></div></li>
+        <li><div><b>접힌 도크를 쓸 자리에 둡니다</b><span>바퀴와 받침 다리가 달린 받침 부분이 아래에 있습니다.</span></div></li>
+        <li><div><b>위에 포개진 경사 부분을 지게차로 듭니다</b><span>포크를 경사 부분의 포크 구멍에 맞춰 넣고 들어 올립니다.</span></div></li>
+        <li><div><b>받침 부분 끝 고리에 걸어 내려놓습니다</b><span>두 토막이 이어지면 전체 길이 11.3m가 됩니다.</span></div></li>
         <li><div><b>유압으로 높이를 맞추고 씁니다</b><span>수동 유압 펌프로 차 바닥 높이에 맞춥니다.</span></div></li>
       </ol>
     </div>
     <div class="strip">
-      <img src="assets/img/step2.jpg" alt="지게차로 경사 부분을 든 모습" loading="lazy">
-      <img src="assets/img/step4.jpg" alt="경사 부분을 받침 쪽으로 옮기는 모습" loading="lazy">
-      <img src="assets/img/step6.jpg" alt="두 토막을 맞붙이는 모습" loading="lazy">
-      <img src="assets/img/step8.jpg" alt="조립이 끝난 이동식 도크" loading="lazy">
+      <figure><img src="assets/img/p-fold-1.jpg" alt="접어 둔 2단 분리형 도크를 앞에서 본 모습" loading="lazy"><figcaption>접은 모습, 앞</figcaption></figure>
+      <figure><img src="assets/img/p-fold-2.jpg" alt="접어 둔 2단 분리형 도크를 옆에서 본 모습" loading="lazy"><figcaption>접은 모습, 옆</figcaption></figure>
+      <figure><img src="assets/img/p-fold-3.jpg" alt="펼쳐 놓은 2단 분리형 도크" loading="lazy"><figcaption>펼친 모습</figcaption></figure>
+      <figure><img src="assets/img/p-fold-4.jpg" alt="펼친 2단 분리형 도크를 꼬리판 쪽에서 본 모습" loading="lazy"><figcaption>펼친 모습, 꼬리판 쪽</figcaption></figure>
     </div>
   </div>
 </section>
@@ -555,38 +610,102 @@ footer b{color:#fff;font-size:16px}
     <h2>규격과 도면</h2>
     <div class="tablebox">
       <table>
-        <thead><tr><th>톤수</th><th>모델</th><th>주 뼈대</th><th>유압 높이 조절</th><th>전체 길이</th><th>폭 (바깥 / 바닥)</th><th>올리는 방식</th></tr></thead>
+        <thead><tr><th>톤수</th><th>주 뼈대</th><th>바닥 철판</th><th>유압 높이 조절</th><th>바퀴 (솔리드)</th><th>받침 다리</th><th>길이 × 폭</th></tr></thead>
         <tbody id="tb"></tbody>
       </table>
     </div>
-    <p class="note">톤수가 올라가면 주 뼈대가 굵어집니다. 10톤은 확정 사양이고, 다른 톤수는 주문할 때 사양을 확인해 드립니다. 길이와 폭은 주문할 때 바꿀 수 있습니다.</p>
+    <p class="note">톤수가 올라가면 주 뼈대와 바닥 철판이 두꺼워집니다. 바닥 철판 위에는 모두 8mm 다이아몬드 망을 덮고, 올리는 방식은 모두 수동 유압 펌프입니다. 20톤도 주문 제작할 수 있습니다.</p>
 
-    <h3 class="sub">10톤(DCQY-10T) 상세 사양</h3>
+    <h3 class="sub">10톤 상세 사양</h3>
     <dl class="specs">
       <div><dt>정격 하중</dt><dd>10,000kg</dd></div>
-      <div><dt>유압 높이 조절</dt><dd>1,100 ~ 1,700mm</dd></div>
-      <div><dt>바깥 폭</dt><dd>2,200mm</dd></div>
-      <div><dt>바닥 폭</dt><dd>2,100mm</dd></div>
-      <div><dt>전체 길이</dt><dd>11,150mm</dd></div>
-      <div><dt>길이 구성</dt><dd>꼬리판 750 + 경사 7,000 + 수평 3,000 + 걸침판 400</dd></div>
-      <div><dt>주 뼈대</dt><dd>160×80mm 각관 5줄</dd></div>
-      <div><dt>가로대</dt><dd>100×50mm 각관</dd></div>
-      <div><dt>바닥</dt><dd>4mm 철판 + 다이아몬드 미끄럼 방지 망</dd></div>
-      <div><dt>걸침판</dt><dd>16mm 철판</dd></div>
-      <div><dt>올리는 방식</dt><dd>수동 유압 펌프</dd></div>
+      <div><dt>유압 높이 조절</dt><dd>1,100 ~ 1,800mm</dd></div>
+      <div><dt>전체 크기</dt><dd>길이 11,300 × 폭 2,200mm</dd></div>
+      <div><dt>길이 구성</dt><dd>꼬리판 800 + 경사 7,100 + 수평 3,000 + 걸침판 400</dd></div>
+      <div><dt>2단 분리형 접은 크기</dt><dd>5,750 × 2,200 × 2,060mm</dd></div>
+      <div><dt>주 뼈대</dt><dd>160×80×4 + 120×60×4mm 각관 5줄</dd></div>
+      <div><dt>가로대 간격</dt><dd>약 40cm</dd></div>
+      <div><dt>보조 뼈대</dt><dd>100×50×4mm 각관</dd></div>
+      <div><dt>바닥</dt><dd>4mm 철판 + 8mm 다이아몬드 망</dd></div>
+      <div><dt>양옆 턱</dt><dd>높이 200mm (40×80×3mm 각관)</dd></div>
+      <div><dt>올리는 방식</dt><dd>도크 전용 일체형 수동 유압 펌프</dd></div>
       <div><dt>유압 실린더</dt><dd>지름 80mm × 2개</dd></div>
-      <div><dt>유압 호스</dt><dd>고압용 이중 철망 고무 호스</dd></div>
-      <div><dt>유압유</dt><dd>46번 내마모 유압유</dd></div>
-      <div><dt>바퀴</dt><dd>솔리드 타이어</dd></div>
-      <div><dt>받침 다리</dt><dd>손으로 돌리는 기계식 1벌</dd></div>
-      <div><dt>색상</dt><dd>파랑</dd></div>
-      <div><dt>같이 오는 것</dt><dd>사용 설명서, 보증서, 합격증, 명판</dd></div>
+      <div><dt>유압 호스</dt><dd>32MPa 고압 호스</dd></div>
+      <div><dt>바퀴</dt><dd>600-9 솔리드 타이어</dd></div>
+      <div><dt>받침 다리</dt><dd>손으로 돌리는 다리 2개, 400mm 조절</dd></div>
+      <div><dt>컨테이너 고정</dt><dd>몸체 용접 고리 + 강철 체인</dd></div>
+      <div><dt>도장</dt><dd>쇼트 블라스트 녹 제거 + 정전 분체 도장</dd></div>
+      <div><dt>색상</dt><dd>파랑 (주문 시 다른 색 가능)</dd></div>
+      <div><dt>같이 오는 것</dt><dd>바퀴 고임목, 차에 거는 체인, 지게차 견인봉</dd></div>
     </dl>
 
     <h3 class="sub">도면</h3>
     <figure class="dwg">
-      <div class="scroll"><img src="assets/img/drawing.png" alt="이동식 도크 10톤 옆모습과 위에서 본 도면. 전체 길이 11150, 경사 7000, 수평 3000, 꼬리판 750, 걸침판 400, 폭 2200" loading="lazy"></div>
-      <figcaption>단위 mm. 꼬리판은 도면과 달리 틈이 없는 일체형으로 나옵니다. 최고 높이는 사양 기준 1,700mm입니다.</figcaption>
+      <div class="scroll">
+        <svg viewBox="0 0 1040 566" role="img" aria-label="이동식 도크 10톤 도면. 위에서 본 모습: 꼬리판 800, 경사 7,100, 수평 3,000, 걸침판 400, 전체 길이 11,300, 폭 2,200. 옆에서 본 모습: 바퀴, 받침 다리, 높이 1,100에서 1,800">
+          <defs>
+            <marker id="da" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#17212c"/></marker>
+            <pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" stroke="#c9d8ec" stroke-width="1"/></pattern>
+          </defs>
+          <g font-weight="700" fill="#17212c">
+            <!-- 위에서 본 모습 -->
+            <text x="50" y="34" font-size="15" font-weight="800">위에서 본 모습</text>
+            <rect x="50" y="62" width="63.7" height="82" fill="#dce7f5" stroke="#17212c" stroke-width="1.5"/>
+            <rect x="50" y="151" width="63.7" height="82" fill="#dce7f5" stroke="#17212c" stroke-width="1.5"/>
+            <rect x="113.7" y="60" width="804.4" height="175.2" fill="#f2f6fb" stroke="#17212c" stroke-width="2"/>
+            <rect x="113.7" y="60" width="804.4" height="175.2" fill="url(#mesh)"/>
+            <line x1="679.2" y1="60" x2="679.2" y2="235.2" stroke="#5b6b7b" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <g stroke-width="6"><line x1="113.7" y1="60" x2="918.1" y2="60" stroke="#f6b900"/><line x1="113.7" y1="60" x2="918.1" y2="60" stroke="#17212c" stroke-dasharray="9 9"/><line x1="113.7" y1="235.2" x2="918.1" y2="235.2" stroke="#f6b900"/><line x1="113.7" y1="235.2" x2="918.1" y2="235.2" stroke="#17212c" stroke-dasharray="9 9"/></g>
+            <rect x="918.1" y="72" width="31.9" height="151.2" fill="#c9d8ec" stroke="#17212c" stroke-width="1.5"/>
+            <g font-size="16" text-anchor="middle" paint-order="stroke" stroke="#f2f6fb" stroke-width="6" stroke-linejoin="round">
+              <text x="396.5" y="153">경사</text>
+              <text x="798.7" y="153">수평</text>
+            </g>
+            <g font-size="13" text-anchor="middle" fill="#5b6b7b">
+              <text x="81.9" y="50">꼬리판</text>
+              <text x="934" y="50">걸침판</text>
+            </g>
+            <!-- 폭 치수 -->
+            <line x1="30" y1="62" x2="30" y2="233" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <text x="22" y="147.6" font-size="14" text-anchor="middle" transform="rotate(-90 22 147.6)">폭 2,200</text>
+            <!-- 길이 치수 -->
+            <line x1="50" y1="264" x2="950" y2="264" stroke="#17212c" stroke-width="1.2"/>
+            <g stroke="#17212c" stroke-width="1.2"><line x1="50" y1="256" x2="50" y2="272"/><line x1="113.7" y1="256" x2="113.7" y2="272"/><line x1="679.2" y1="256" x2="679.2" y2="272"/><line x1="918.1" y1="256" x2="918.1" y2="272"/><line x1="950" y1="256" x2="950" y2="272"/></g>
+            <g font-size="14" text-anchor="middle">
+              <text x="81.9" y="258">800</text>
+              <text x="396.5" y="258">7,100</text>
+              <text x="798.7" y="258">3,000</text>
+              <text x="934" y="258">400</text>
+            </g>
+            <line x1="52" y1="294" x2="948" y2="294" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <rect x="430" y="282" width="140" height="24" fill="#fff"/>
+            <text x="500" y="299" font-size="15" font-weight="800" text-anchor="middle">전체 길이 11,300</text>
+
+            <!-- 옆에서 본 모습 -->
+            <text x="50" y="344" font-size="15" font-weight="800">옆에서 본 모습</text>
+            <line x1="20" y1="528" x2="1030" y2="528" stroke="#17212c" stroke-width="2"/>
+            <rect x="952" y="414" width="62" height="58" fill="none" stroke="#5b6b7b" stroke-width="1.5" stroke-dasharray="6 5"/>
+            <text x="983" y="447" font-size="12" text-anchor="middle" fill="#5b6b7b">차 바닥</text>
+            <path d="M300 496 L679.2 420 L918.1 420 L918.1 452 L679.2 456 Z" fill="#0c3f8a"/>
+            <path d="M50 528 L113.7 523 L679.2 408.5 L918.1 408.5 L950 412.5 L950 416.5 L918.1 420 L679.2 420 L118 532 L50 532 Z" fill="#1560c4"/>
+            <g stroke-width="4" fill="none"><path d="M118 509 L679.2 394.5 L916 394.5" stroke="#f6b900"/><path d="M118 509 L679.2 394.5 L916 394.5" stroke="#17212c" stroke-dasharray="8 8"/></g>
+            <line x1="560" y1="444" x2="560" y2="512" stroke="#0c3f8a" stroke-width="7"/>
+            <line x1="604" y1="438" x2="566" y2="504" stroke="#9aa7b5" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="560" cy="514" r="14" fill="#17212c"/><circle cx="560" cy="514" r="5" fill="#e8edf2"/>
+            <line x1="905" y1="452" x2="905" y2="522" stroke="#17212c" stroke-width="7"/>
+            <rect x="893" y="521" width="24" height="7" fill="#17212c"/>
+            <!-- 높이 치수 -->
+            <line x1="940" y1="526" x2="940" y2="419" stroke="#17212c" stroke-width="1.3" marker-start="url(#da)" marker-end="url(#da)"/>
+            <text x="929" y="472" font-size="13" text-anchor="middle" transform="rotate(-90 929 472)">높이 1,100~1,800</text>
+            <g font-size="13" text-anchor="middle" fill="#5b6b7b">
+              <text x="82" y="550">꼬리판</text>
+              <text x="560" y="550">바퀴 (유압 실린더 2개)</text>
+              <text x="890" y="550">받침 다리</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>단위 mm, 10톤 기준. 2단 분리형은 접으면 5,750 × 2,200 × 2,060mm입니다. 높이는 1,100~1,800mm 사이에서 맞춥니다.</figcaption>
     </figure>
   </div>
 </section>
@@ -597,10 +716,12 @@ footer b{color:#fff;font-size:16px}
     <div class="faq">
       <details open><summary>전기가 없는 야적장에서도 쓸 수 있나요?</summary><p>네. 손으로 젓는 유압 펌프로 높이를 올리고 내리기 때문에 전기가 필요 없습니다.</p></details>
       <details><summary>몇 톤을 골라야 할지 모르겠습니다.</summary><p>지게차 자체 무게에 한 번에 싣는 짐 무게를 더하세요. 그 값보다 큰 톤수 중에서 여유 있는 쪽을 고릅니다. 위쪽 계산기에 넣어 보시거나, 지게차 모델명을 알려 주시면 골라 드립니다.</p></details>
-      <details><summary>기본형과 2단 분리형은 무엇이 다른가요?</summary><p>기본형은 한 몸으로 되어 있어 내려놓으면 바로 씁니다. 2단 분리형은 경사 부분과 받침 부분이 나뉘어 있어 운반과 보관이 쉽고, 현장에서 지게차로 맞붙여 씁니다. 쓰는 방법은 둘이 같습니다.</p></details>
+      <details><summary>기본형과 2단 분리형은 무엇이 다른가요?</summary><p>기본형은 한 몸으로 되어 있어 내려놓으면 바로 씁니다. 2단 분리형은 경사 부분이 받침 부분 위에 포개져 있어(접은 길이 5.75m) 운반과 보관이 쉽고, 현장에서 지게차로 펼쳐 씁니다. 쓰는 방법은 둘이 같습니다.</p></details>
       <details><summary>길이나 폭을 바꿔서 주문할 수 있나요?</summary><p>가능합니다. 현장 폭, 차 종류, 지게차 크기를 알려 주시면 맞는 치수로 견적을 드립니다.</p></details>
-      <details><summary>옮길 때는 어떻게 하나요?</summary><p>바퀴가 달려 있어 지게차로 끌어서 옮깁니다. 꼬리판 쪽에 지게차로 끄는 고리가 있습니다. 고정 공사는 하지 않습니다.</p></details>
-      <details><summary>바퀴는 어떤 타이어인가요?</summary><p>솔리드 타이어입니다. 속이 꽉 찬 고무라 펑크가 나지 않습니다.</p></details>
+      <details><summary>옮길 때는 어떻게 하나요?</summary><p>바퀴가 달려 있어 지게차로 끌어서 옮깁니다. 같이 오는 견인봉을 끼워 지게차에 걸면 됩니다. 고정 공사는 하지 않습니다.</p></details>
+      <details><summary>바퀴는 어떤 타이어인가요?</summary><p>솔리드 타이어입니다. 속이 꽉 찬 고무라 펑크가 나지 않습니다. 6~10톤은 600-9, 12·15톤은 700-9 규격입니다.</p></details>
+      <details><summary>색상을 바꿀 수 있나요?</summary><p>네. 기본은 파랑이고, 주문할 때 원하는 색으로 칠해서 만듭니다. 실제 색은 주문 전에 색 견본으로 확인해 드립니다.</p></details>
+      <details><summary>2단 분리형은 접으면 얼마나 줄어드나요?</summary><p>접으면 길이 5.75m, 폭 2.2m, 높이 2.06m입니다(10톤 기준). 펼치면 11.3m가 됩니다.</p></details>
     </div>
   </div>
 </section>
@@ -646,18 +767,27 @@ footer b{color:#fff;font-size:16px}
     15: {w:"3,200kg", fit:"4.5~5톤 지게차 작업에 맞습니다",    why:"예: 지게차 7톤 + 짐 5톤 = 12톤. 중량물 현장용입니다."}
   };
   var order = [6,8,10,12,15];
-  var FRAME = {6:"160×80 각관 4줄", 8:"160×80 각관 4줄 + 120×60 각관 1줄", 10:"160×80 각관 5줄", 12:"200×100 각관 4줄 + 160×80 각관 1줄", 15:"200×100 각관 5줄"};
+  // 톤수별 사양 (공장 사양서 기준, 폭은 모두 2.2m)
+  var S = {
+    6:  {frame:"160×80×4 각관 4줄",            plate:"3mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2개"},
+    8:  {frame:"160×80×4 + 120×60×4 각관 5줄", plate:"3mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2개"},
+    10: {frame:"160×80×4 + 120×60×4 각관 5줄", plate:"4mm", h:"1.1 ~ 1.8m", tire:"600-9", leg:"2개"},
+    12: {frame:"200×100×4 각관 5줄",           plate:"5mm", h:"1.2 ~ 1.8m", tire:"700-9", leg:"2개 + 보조 2개"},
+    15: {frame:"200×100×5 각관 5줄",           plate:"6mm", h:"1.2 ~ 1.8m", tire:"700-9", leg:"2개 + 보조 2개"}
+  };
   var $ = function(id){ return document.getElementById(id); };
 
   // 규격표
   $("tb").innerHTML = order.map(function(t){
-    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>DCQY-'+t+'T</td><td>'+FRAME[t]+'</td><td>1.1 ~ 1.7m</td><td>11.15m</td><td>2.2m / 2.1m</td><td>수동 유압 펌프</td></tr>';
+    return '<tr data-ton="'+t+'"><td>'+t+'톤</td><td>'+S[t].frame+'</td><td>'+S[t].plate+'</td><td>'+S[t].h+'</td><td>'+S[t].tire+'</td><td>'+S[t].leg+'</td><td>11.3m × 2.2m</td></tr>';
   }).join("");
 
   function pick(t){
     if(!D[t]) return;
     document.querySelectorAll(".tons button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.ton == t ? "true" : "false"); });
-    $("iModel").textContent = "DCQY-" + t + "T";
+    $("iH").textContent = S[t].h;
+    $("iFrame").textContent = S[t].frame;
+    $("svgH").textContent = S[t].h.replace(/ /g, "");
     $("iTon").textContent = t;
     $("iFit").textContent = D[t].fit;
     $("iWhy").textContent = D[t].why;
