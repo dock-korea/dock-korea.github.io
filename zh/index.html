@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>移动式登车桥 6~15吨 | 标准型与两节折叠型集装箱装卸坡道</title>
-<meta name="description" content="在没有装卸平台的仓库和堆场，叉车可直接开进集装箱的移动式登车桥。标准型与两节折叠型，6/8/10/12/15吨，手动液压调节高度1.1~1.8米，宽2.2米。">
+<title>BaroDock | 移动式登车桥 6~15吨，标准型与两节折叠型集装箱装卸坡道</title>
+<meta name="description" content="BaroDock移动式登车桥。在没有装卸平台的仓库和堆场，叉车可直接开进集装箱。标准型与两节折叠型，6/8/10/12/15吨，手动液压调节高度1.1~1.8米，宽2.2米。">
 <link rel="alternate" hreflang="ko" href="https://dock-korea.github.io/">
 <link rel="alternate" hreflang="en" href="https://dock-korea.github.io/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://dock-korea.github.io/zh/">
@@ -15,7 +15,7 @@
 <script>
 /* ───────── 여기만 고치면 됩니다 ───────── */
 var SITE = {
-  name: "移动式登车桥",          // 상호
+  name: "BaroDock",          // 상호
   tel: "",                      // 대표 전화 (예: "031-000-0000")
   kakao: "",                    // 카카오톡 채널 주소
   // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
@@ -318,7 +318,7 @@ body{word-break:normal;line-break:strict;font-family:"Pretendard Variable",Prete
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><i></i><span data-site="name">移动式登车桥</span></a>
+    <a class="brand" href="#top"><i></i><span data-site="name">BaroDock</span></a>
     <nav class="nav" aria-label="主菜单">
       <a href="#types">类型</a>
       <a href="#hyd">手动液压</a>
@@ -773,7 +773,7 @@ body{word-break:normal;line-break:strict;font-family:"Pretendard Variable",Prete
 
 <footer>
   <div class="wrap">
-    <p><b data-site="name">移动式登车桥</b></p>
+    <p><b data-site="name">BaroDock</b></p>
     <p id="bizInfo">公司名称、负责人、营业执照号、地址和电话将在确认后补充。</p>
   </div>
 </footer>
@@ -846,7 +846,7 @@ body{word-break:normal;line-break:strict;font-family:"Pretendard Variable",Prete
   // 문의
   $("askForm").addEventListener("submit", function(e){
     e.preventDefault();
-    var f = new FormData(e.target), text = "[移动式登车桥询价]\n姓名/公司: " + f.get("name") + "\n电话: " + f.get("tel") + "\n类型: " + f.get("type") + "\n吨位: " + f.get("ton") + "\n地区: " + (f.get("area") || "-") + "\n内容: " + (f.get("msg") || "-");
+    var f = new FormData(e.target), text = "[BaroDock询价]\n姓名/公司: " + f.get("name") + "\n电话: " + f.get("tel") + "\n类型: " + f.get("type") + "\n吨位: " + f.get("ton") + "\n地区: " + (f.get("area") || "-") + "\n内容: " + (f.get("msg") || "-");
     var box = $("done"); box.hidden = false;
     if(SITE.endpoint){
       var btn = e.target.querySelector("button[type=submit]"), data = new URLSearchParams();
