@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mobile Dock Ramp 6–15 t | Standard and Two-Section Container Loading Ramps</title>
-<meta name="description" content="Mobile dock ramps that let forklifts drive straight into containers from warehouses and yards without a loading dock. Standard and two-section types, 6/8/10/12/15 t, manual hydraulic height 1.1–1.8 m, width 2.2 m.">
+<title>BaroDock | Mobile Dock Ramps 6–15 t, Standard and Two-Section Container Loading Ramps</title>
+<meta name="description" content="BaroDock mobile dock ramps. Forklifts drive straight into containers from warehouses and yards without a loading dock. Standard and two-section types, 6/8/10/12/15 t, manual hydraulic height 1.1–1.8 m, width 2.2 m.">
 <link rel="alternate" hreflang="ko" href="https://dock-korea.github.io/">
 <link rel="alternate" hreflang="en" href="https://dock-korea.github.io/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://dock-korea.github.io/zh/">
@@ -15,7 +15,7 @@
 <script>
 /* ───────── 여기만 고치면 됩니다 ───────── */
 var SITE = {
-  name: "Mobile Dock Ramp",          // 상호
+  name: "BaroDock",          // 상호
   tel: "",                      // 대표 전화 (예: "031-000-0000")
   kakao: "",                    // 카카오톡 채널 주소
   // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
@@ -319,7 +319,7 @@ footer b{color:#fff;font-size:16px}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><i></i><span data-site="name">Mobile Dock Ramp</span></a>
+    <a class="brand" href="#top"><i></i><span data-site="name">BaroDock</span></a>
     <nav class="nav" aria-label="Main menu">
       <a href="#types">Types</a>
       <a href="#hyd">Hydraulics</a>
@@ -774,7 +774,7 @@ footer b{color:#fff;font-size:16px}
 
 <footer>
   <div class="wrap">
-    <p><b data-site="name">Mobile Dock Ramp</b></p>
+    <p><b data-site="name">BaroDock</b></p>
     <p id="bizInfo">Company name, representative, business registration number, address and phone number will be added soon.</p>
   </div>
 </footer>
@@ -847,7 +847,7 @@ footer b{color:#fff;font-size:16px}
   // 문의
   $("askForm").addEventListener("submit", function(e){
     e.preventDefault();
-    var f = new FormData(e.target), text = "[Mobile dock ramp quote]\nName/Company: " + f.get("name") + "\nPhone: " + f.get("tel") + "\nType: " + f.get("type") + "\nCapacity: " + f.get("ton") + "\nArea: " + (f.get("area") || "-") + "\nMessage: " + (f.get("msg") || "-");
+    var f = new FormData(e.target), text = "[BaroDock quote]\nName/Company: " + f.get("name") + "\nPhone: " + f.get("tel") + "\nType: " + f.get("type") + "\nCapacity: " + f.get("ton") + "\nArea: " + (f.get("area") || "-") + "\nMessage: " + (f.get("msg") || "-");
     var box = $("done"); box.hidden = false;
     if(SITE.endpoint){
       var btn = e.target.querySelector("button[type=submit]"), data = new URLSearchParams();
