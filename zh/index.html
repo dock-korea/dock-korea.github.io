@@ -16,7 +16,7 @@
 /* ───────── 여기만 고치면 됩니다 ───────── */
 var SITE = {
   name: "BaroDock",          // 상호
-  tel: "",                      // 대표 전화 (예: "031-000-0000")
+  tel: "+82 10-8760-4473",         // 대표 전화
   kakao: "",                    // 카카오톡 채널 주소
   // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
   endpoint: "https://docs.google.com/forms/d/e/1FAIpQLSemXc8IkjYKYkBPOfzdNQn_7CLXf5B5F1qgM8W7IElYtC2u9A/formResponse",
@@ -254,6 +254,13 @@ tbody tr.on td:first-child{color:var(--blue)}
 
 footer{background:var(--ink);color:#aab6c3;padding:40px 0;font-size:14px}
 footer b{color:#fff;font-size:16px}
+footer .biz{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 40px;margin-top:16px;line-height:1.6}
+footer .biz p{display:flex;gap:14px}
+footer .biz span{flex:0 0 7.5em;color:#7f8d9c}
+footer a{color:#d7e0ea;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+[hidden]{display:none!important}
+@media (max-width:860px){footer .biz{grid-template-columns:1fr}footer .biz span{flex-basis:7em}}
 
 /* 휴대폰 */
 @media (max-width:860px){
@@ -774,7 +781,14 @@ body{word-break:normal;line-break:strict;font-family:"Pretendard Variable",Prete
 <footer>
   <div class="wrap">
     <p><b data-site="name">BaroDock</b></p>
-    <p id="bizInfo">公司名称、负责人、营业执照号、地址和电话将在确认后补充。</p>
+    <div class="biz" id="bizInfo">
+      <p><span>负责人</span>이경인</p>
+      <p><span>营业执照号</span>210-13-87171</p>
+      <p><span>办公室</span>경기도 남양주시 순화궁로 272 동광비즈타워 지하1층 127호</p>
+      <p><span>仓库</span>경기도 양주시 은현면 도하리 93-12</p>
+      <p><span>电话</span><a href="tel:+821087604473">+82 10-8760-4473</a></p>
+      <p><span>邮箱</span><a href="mailto:coolky86@naver.com">coolky86@naver.com</a></p>
+    </div>
   </div>
 </footer>
 
