@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이동식 도크 6톤~15톤 | 기본형·2단 분리형 컨테이너 상하차 경사로</title>
-<meta name="description" content="도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라가는 이동식 도크. 기본형과 2단 분리형, 6·8·10·12·15톤, 수동 유압으로 높이 1.1~1.8m 조절, 폭 2.2m.">
+<title>바로도크 | 이동식 도크 6톤~15톤, 기본형·2단 분리형 컨테이너 상하차 경사로</title>
+<meta name="description" content="바로도크(BaroDock) 이동식 도크. 도크가 없는 창고·야적장에서 지게차가 컨테이너 안까지 바로 올라갑니다. 기본형과 2단 분리형, 6·8·10·12·15톤, 수동 유압으로 높이 1.1~1.8m 조절, 폭 2.2m.">
 <link rel="alternate" hreflang="ko" href="https://dock-korea.github.io/">
 <link rel="alternate" hreflang="en" href="https://dock-korea.github.io/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://dock-korea.github.io/zh/">
@@ -15,7 +15,7 @@
 <script>
 /* ───────── 여기만 고치면 됩니다 ───────── */
 var SITE = {
-  name: "이동식 도크",          // 상호
+  name: "바로도크",          // 상호
   tel: "",                      // 대표 전화 (예: "031-000-0000")
   kakao: "",                    // 카카오톡 채널 주소
   // 견적 문의가 쌓이는 구글 양식(→ 구글 시트 "이동식 도크 견적 문의(응답)")
@@ -315,7 +315,7 @@ footer b{color:#fff;font-size:16px}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><i></i><span data-site="name">이동식 도크</span></a>
+    <a class="brand" href="#top"><i></i><span data-site="name">바로도크</span></a>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#types">종류</a>
       <a href="#hyd">수동 유압</a>
@@ -770,7 +770,7 @@ footer b{color:#fff;font-size:16px}
 
 <footer>
   <div class="wrap">
-    <p><b data-site="name">이동식 도크</b></p>
+    <p><b data-site="name">바로도크</b></p>
     <p id="bizInfo">상호 · 대표자 · 사업자등록번호 · 주소 · 전화번호는 정보를 받는 대로 넣습니다.</p>
   </div>
 </footer>
@@ -843,7 +843,7 @@ footer b{color:#fff;font-size:16px}
   // 문의
   $("askForm").addEventListener("submit", function(e){
     e.preventDefault();
-    var f = new FormData(e.target), text = "[이동식 도크 견적 문의]\n이름/회사: " + f.get("name") + "\n연락처: " + f.get("tel") + "\n종류: " + f.get("type") + "\n톤수: " + f.get("ton") + "\n지역: " + (f.get("area") || "-") + "\n내용: " + (f.get("msg") || "-");
+    var f = new FormData(e.target), text = "[바로도크 견적 문의]\n이름/회사: " + f.get("name") + "\n연락처: " + f.get("tel") + "\n종류: " + f.get("type") + "\n톤수: " + f.get("ton") + "\n지역: " + (f.get("area") || "-") + "\n내용: " + (f.get("msg") || "-");
     var box = $("done"); box.hidden = false;
     if(SITE.endpoint){
       var btn = e.target.querySelector("button[type=submit]"), data = new URLSearchParams();
